@@ -1,0 +1,90 @@
+[
+  {
+    "id": 0,
+    "image": "../images/podcast-02.jpg",
+    "title": "Into Public Speaking as a Developer, Part 2",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Tunes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 1,
+    "image": "../images/podcast-02.jpg",
+    "title": "Talking Competitive Advantage and Moats for Small SaaSes, Part 1",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Tunes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 2,
+    "image": "../images/podcast-03.jpg",
+    "title": "Bootstrapping DevKit to $4.5k MRR",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Mixtapes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 3,
+    "image": "../images/podcast-04.jpg",
+    "title": "Focusing on one product in a strong market - For 15 years",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Remixes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 4,
+    "image": "../images/podcast-05.jpg",
+    "title": "How to build a brand for your indie product",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Mixes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 5,
+    "image": "../images/podcast-06.jpg",
+    "title": "Enterprise Sales as an Indie SaaS featuring Josh Luiz",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Remixes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 6,
+    "image": "../images/podcast-07.jpg",
+    "title": "Building a community of generalists on a remote island",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Mixtapes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  },
+  {
+    "id": 7,
+    "image": "../images/podcast-08.jpg",
+    "title": "Getting Started with Customer Interviews",
+    "slug": "/podcast",
+    "date": "Jan 24",
+    "episode": 234,
+    "category": "Mixes",
+    "excerpt":
+      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+  }
+]
