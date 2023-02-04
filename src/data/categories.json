@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "tunes",
+    "name": "Tunes",
+    "url": "/tunes",
+    "color": {
+      "background": "bg-teal-500",
+      "buttonHover": "hover:bg-teal-600",
+      "text": "text-teal-500",
+      "textHover": "hover:text-teal-500",
+      "arrow": "text-teal-200",
+      "hex": "#14b8a6"
+    }
+  },
+  {
+    "slug": "remixes",
+    "name": "Remixes",
+    "url": "/remixes",
+    "color": {
+      "background": "bg-sky-500",
+      "buttonHover": "hover:bg-sky-600",
+      "text": "text-sky-500",
+      "textHover": "hover:text-sky-500",
+      "arrow": "text-sky-200",
+      "hex": "#0ea5e9"
+    }
+  },
+  {
+    "slug": "mixes",
+    "name": "Mixes",
+    "url": "/mixes",
+    "color": {
+      "background": "bg-violet-500",
+      "buttonHover": "hover:bg-violet-600",
+      "text": "text-violet-500",
+      "textHover": "hover:text-violet-500",
+      "arrow": "text-violet-200",
+      "hex": "#8b5cf6"
+    }
+  },
+  {
+    "slug": "mixtapes",
+    "name": "Mixtapes",
+    "url": "/mixtapes",
+    "color": {
+      "background": "bg-pink-500",
+      "buttonHover": "hover:bg-pink-600",
+      "text": "text-pink-500",
+      "textHover": "hover:text-pink-500",
+      "arrow": "text-pink-200",
+      "hex": "#ec4899"
+    }
+  }
+]
