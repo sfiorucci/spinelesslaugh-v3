@@ -21,7 +21,7 @@
 
         <!-- Podcasts -->
         <div>
-          <PodcastItem v-for="release in releases" :key="release.id"
+          <PodcastItem v-for="release in releases" :key="release.slug"
             :item="release"
             :category="category"
           />
@@ -38,6 +38,7 @@ import PodcastItem from '../partials/PodcastItem.vue'
 import CategoryJSON from '../data/categories.json'
 import ReleaseJSON from '../data/releases.json'
 import Filter from "../components/FilterButton.vue"
+import sortByDate from '../mixins/sortByDate'
 
 export default {
   name: 'Podcasts',
@@ -50,7 +51,7 @@ export default {
       return CategoryJSON
     },
     releases() {
-      return ReleaseJSON
+      return this.sortByDate(ReleaseJSON, 'desc')
     },
     setArchiveTitle() {
       let title = ''
@@ -59,6 +60,7 @@ export default {
       return title
     }
   },
+  mixins: [ sortByDate ],
   setup() {
     const category = ref('All')  
 

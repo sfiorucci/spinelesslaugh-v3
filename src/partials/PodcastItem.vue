@@ -7,7 +7,7 @@
           <router-link :class="setCategoryInfo.color.hover" class="text-slate-800 transition duration-150 ease-in-out" :to="item.slug">{{item.title}}</router-link>
         </h3>
         <div class="font-hkgrotesk font-medium text-sm text-slate-500 mb-1">
-          <a :class="setCategoryInfo.color.text" class="hover:underline" :href=setCategoryInfo.url>{{item.category}}</a> <span class="text-slate-300">·</span> {{item.date}}
+          <a :class="setCategoryInfo.color.text" class="hover:underline" :href=setCategoryInfo.url>{{item.category}}</a> <span class="text-slate-300">·</span> {{this.formatDate(item.date)}}
         </div>
         <div class="text-sm text-slate-500">
           {{item.excerpt}}
@@ -27,6 +27,7 @@
 import CategoryJSON from '../data/categories.json'
 import matchCategory from '../mixins/matchCategory'
 import buildImagePath from '../mixins/buildImagePath'
+import formatDate from '../mixins/formatDate'
 
 export default {
   name: 'PodcastItem',
@@ -40,7 +41,7 @@ export default {
       required: true
     }
   },
-  mixins: [ matchCategory, buildImagePath ],
+  mixins: [ matchCategory, buildImagePath, formatDate ],
   computed: {
     filters() {
       return CategoryJSON

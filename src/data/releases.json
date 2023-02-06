@@ -1,104 +1,96 @@
 [
   {
-    "id": 0,
     "path": {
       "image": "music/mixtapes/images/square",
       "audio": "music/mixtapes/audio"
     },
     "title": "Top 100 (best songs of 2022)",
     "slug": "top-100-2022-best-songs",
-    "date": "Dec 31 © 2022",
+    "date": "2022-12-31",
     "category": "Mixtapes",
     "excerpt":
       "A massive 6½-hour mixtape with 100 great songs out in 2022. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   },
   {
-    "id": 1,
     "path": {
       "image": "music/mixes/images/square",
       "audio": "music/mixes/audio"
     },
     "title": "MixMag 2010-2019",
     "slug": "mixmag-2010-2019-best-techno",
-    "date": "Apr 24 © 2020",
+    "date": "2020-04-24",
     "category": "Mixes",
     "excerpt":
       "A time machine, a look from the 2020's pandemic to the past 10 years. 20 of the best techno tracks of the decade, selected by MixMag & mixed by Spineless Laugh in strict chronological order."
   },
   {
-    "id": 2,
     "path": {
       "image": "music/remixes/images/square",
       "audio": "music/remixes/audio"
     },
     "title": "The Last Big Impezzo (white rain remix)",
     "slug": "the-last-big-impezzo-white-rain-remix",
-    "date": "Nov 5 © 2015",
+    "date": "2015-11-05",
     "category": "Remixes",
     "excerpt":
       "A deep dive from original chaos to unfaithful calm and sharp melodies. Everything following a quite long path of noisy but tight kickdrum danceability."
   },
   {
-    "id": 3,
     "path": {
       "image": "music/tunes/images/square",
       "audio": "music/tunes/audio"
     },
     "title": "Bad Aesthetics",
     "slug": "bad-aesthetics",
-    "date": "Jun 28 © 2013",
+    "date": "2013-06-28",
     "category": "Tunes",
     "excerpt":
       "A hot cup full of dubstep, lust, and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis of how shouldn't be so hard to have a nice day, and how actually is. Finally."
   },
   {
-    "id": 4,
     "path": {
       "image": "music/remixes/images/square",
       "audio": "music/remixes/audio"
     },
     "title": "The Sun (numbers remix)",
     "slug": "the-sun-numbers-remix",
-    "date": "Mar 25 © 2012",
+    "date": "2012-03-25",
     "category": "Remixes",
     "excerpt":
       "You and me. The sun and an overwhelming rage looming. House beats, funky synths, 8-bit computer noises. Fractured voices, decomposed to be re-combined along multiple layers. Rising, then falling. Like the sun broken into cold numbers."
   },
   {
-    "id": 5,
     "path": {
       "image": "music/tunes/images/square",
       "audio": "music/tunes/audio"
     },
     "title": "US2Know",
     "slug": "us2know",
-    "date": "Mar 27 © 2012",
+    "date": "2012-03-27",
     "category": "Tunes",
     "excerpt":
       "Have you ever had the experience of losing reference points through blurred memories and the now undefined shape of what you used to know? A trancestep dubtempo filled with tremolo synths, numbed beats, and pieces of word repeated as a ping-pong delayed mantra."
   },
   {
-    "id": 6,
     "path": {
       "image": "music/mixtapes/images/square",
       "audio": "music/mixtapes/audio"
     },
     "title": "Top 90 (best songs of 2021)",
     "slug": "top-90-2021-best-songs",
-    "date": "Dec 31 © 2021",
+    "date": "2021-12-31",
     "category": "Mixtapes",
     "excerpt":
       "A massive nearly-6-hour mixtape with 90 great songs out in 2021. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   },
   {
-    "id": 7,
     "path": {
       "image": "music/mixtapes/images/square",
       "audio": "music/mixtapes/audio"
     },
     "title": "Top 100 (best songs of 2020)",
     "slug": "top-100-2020-best-songs",
-    "date": "Dec 31 © 2020",
+    "date": "2020-12-31",
     "category": "Mixtapes",
     "excerpt":
       "A massive 6½-hour mixtape with 100 great songs out in 2020. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
