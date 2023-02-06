@@ -1,90 +1,106 @@
 [
   {
     "id": 0,
-    "image": "../images/podcast-02.jpg",
-    "title": "Into Public Speaking as a Developer, Part 2",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Tunes",
+    "path": {
+      "image": "music/mixtapes/images/square",
+      "audio": "music/mixtapes/audio"
+    },
+    "title": "Top 100 (best songs of 2022)",
+    "slug": "top-100-2022-best-songs",
+    "date": "Dec 31 © 2022",
+    "category": "Mixtapes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "A massive 6½-hour mixtape with 100 great songs out in 2022. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   },
   {
     "id": 1,
-    "image": "../images/podcast-02.jpg",
-    "title": "Talking Competitive Advantage and Moats for Small SaaSes, Part 1",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Tunes",
+    "path": {
+      "image": "music/mixes/images/square",
+      "audio": "music/mixes/audio"
+    },
+    "title": "MixMag 2010-2019",
+    "slug": "mixmag-2010-2019-best-techno",
+    "date": "Apr 24 © 2020",
+    "category": "Mixes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "A time machine, a look from the 2020's pandemic to the past 10 years. 20 of the best techno tracks of the decade, selected by MixMag & mixed by Spineless Laugh in strict chronological order."
   },
   {
     "id": 2,
-    "image": "../images/podcast-03.jpg",
-    "title": "Bootstrapping DevKit to $4.5k MRR",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Mixtapes",
+    "path": {
+      "image": "music/remixes/images/square",
+      "audio": "music/remixes/audio"
+    },
+    "title": "The Last Big Impezzo (white rain remix)",
+    "slug": "the-last-big-impezzo-white-rain-remix",
+    "date": "Nov 5 © 2015",
+    "category": "Remixes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "A deep dive from original chaos to unfaithful calm and sharp melodies. Everything following a quite long path of noisy but tight kickdrum danceability."
   },
   {
     "id": 3,
-    "image": "../images/podcast-04.jpg",
-    "title": "Focusing on one product in a strong market - For 15 years",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Remixes",
+    "path": {
+      "image": "music/tunes/images/square",
+      "audio": "music/tunes/audio"
+    },
+    "title": "Bad Aesthetics",
+    "slug": "bad-aesthetics",
+    "date": "Jun 28 © 2013",
+    "category": "Tunes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "A hot cup full of dubstep, lust, and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis of how shouldn't be so hard to have a nice day, and how actually is. Finally."
   },
   {
     "id": 4,
-    "image": "../images/podcast-05.jpg",
-    "title": "How to build a brand for your indie product",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Mixes",
+    "path": {
+      "image": "music/remixes/images/square",
+      "audio": "music/remixes/audio"
+    },
+    "title": "The Sun (numbers remix)",
+    "slug": "the-sun-numbers-remix",
+    "date": "Mar 25 © 2012",
+    "category": "Remixes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "You and me. The sun and an overwhelming rage looming. House beats, funky synths, 8-bit computer noises. Fractured voices, decomposed to be re-combined along multiple layers. Rising, then falling. Like the sun broken into cold numbers."
   },
   {
     "id": 5,
-    "image": "../images/podcast-06.jpg",
-    "title": "Enterprise Sales as an Indie SaaS featuring Josh Luiz",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Remixes",
+    "path": {
+      "image": "music/tunes/images/square",
+      "audio": "music/tunes/audio"
+    },
+    "title": "US2Know",
+    "slug": "us2know",
+    "date": "Mar 27 © 2012",
+    "category": "Tunes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "Have you ever had the experience of losing reference points through blurred memories and the now undefined shape of what you used to know? A trancestep dubtempo filled with tremolo synths, numbed beats, and pieces of word repeated as a ping-pong delayed mantra."
   },
   {
     "id": 6,
-    "image": "../images/podcast-07.jpg",
-    "title": "Building a community of generalists on a remote island",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
+    "path": {
+      "image": "music/mixtapes/images/square",
+      "audio": "music/mixtapes/audio"
+    },
+    "title": "Top 90 (best songs of 2021)",
+    "slug": "top-90-2021-best-songs",
+    "date": "Dec 31 © 2021",
     "category": "Mixtapes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "A massive nearly-6-hour mixtape with 90 great songs out in 2021. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   },
   {
     "id": 7,
-    "image": "../images/podcast-08.jpg",
-    "title": "Getting Started with Customer Interviews",
-    "slug": "/podcast",
-    "date": "Jan 24",
-    "episode": 234,
-    "category": "Mixes",
+    "path": {
+      "image": "music/mixtapes/images/square",
+      "audio": "music/mixtapes/audio"
+    },
+    "title": "Top 100 (best songs of 2020)",
+    "slug": "top-100-2020-best-songs",
+    "date": "Dec 31 © 2020",
+    "category": "Mixtapes",
     "excerpt":
-      "In today's show, we're excited to have Mike chats with Indie Dev Benedicte Ruiz about getting into public speaking. Mike was the CEO of Panoramic X, a pioneer web development studio."
+      "A massive 6½-hour mixtape with 100 great songs out in 2020. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   }
 ]
