@@ -7,15 +7,23 @@
         <div class="absolute inset-0 bg-slate-100 rounded-3xl -mx-20 -z-10" aria-hidden="true"></div>
 
         <div class="py-12 md:py-20 -mx-20 px-20 overflow-hidden">
-
           <!-- Carousel built with Swiper.js [https://swiperjs.com/] -->
           <!-- * Custom styles in src/css/additional-styles/theme.scss -->
           <div class="carousel swiper-container">
             <div class="swiper-wrapper">
               <!-- Carousel items -->
-              <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
+              <CarouselItem v-for="featuredRelease in getFeaturedReleases" :key="featuredRelease.slug"
+                :release="featuredRelease"
+              />
+              <!-- <CarouselItem v-for="featuredRelease in getFeaturedReleases" :key="featuredRelease.slug"
+                :url="featuredRelease.slug"
+                :title="featuredRelease.title"
+                :category="featuredRelease.category"
+                :date="this.formatDate(featuredRelease.date)"
+              /> -->
+              <!-- <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
                 <router-link to="/podcast">
-                  <div class="group-odd:rotate-1 group-even:-rotate-1">
+                  <div>
                     <div class="absolute inset-0 -z-10">
                       <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-01.png" width="446" height="200" alt="Carousel 01" />
                     </div>
@@ -29,7 +37,7 @@
               </div>
               <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
                 <router-link to="/podcast">
-                  <div class="group-odd:rotate-1 group-even:-rotate-1">
+                  <div>
                     <div class="absolute inset-0 -z-10">
                       <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-02.png" width="446" height="200" alt="Carousel 02" />
                     </div>
@@ -43,7 +51,7 @@
               </div>
               <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
                 <router-link to="/podcast">
-                  <div class="group-odd:rotate-1 group-even:-rotate-1">
+                  <div>
                     <div class="absolute inset-0 -z-10">
                       <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-03.png" width="446" height="200" alt="Carousel 03" />
                     </div>
@@ -57,7 +65,7 @@
               </div>
               <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
                 <router-link to="/podcast">
-                  <div class="group-odd:rotate-1 group-even:-rotate-1">
+                  <div>
                     <div class="absolute inset-0 -z-10">
                       <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-04.png" width="446" height="200" alt="Carousel 04" />
                     </div>
@@ -68,7 +76,7 @@
                     </div>
                   </div>
                 </router-link>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -96,6 +104,10 @@
 
 <script>
 import { onMounted } from 'vue'
+import CarouselItem from '../partials/CarouselItem.vue'
+import ReleaseJSON from '../data/releases.json'
+import FeaturedReleaseJSON from '../data/featured_releases.json'
+import getFeatured from '../mixins/helpers'
  
 // Import Swiper
 import Swiper, { Navigation } from 'swiper'
@@ -104,6 +116,21 @@ Swiper.use([Navigation])
 
 export default {
   name: 'Carousel',
+  components: {
+    CarouselItem
+  },
+  computed: {
+    releases() {
+      return ReleaseJSON
+    },
+    featuredReleases() {
+      return FeaturedReleaseJSON
+    },
+    getFeaturedReleases() {
+      return this.getFeatured(this.featuredReleases, this.releases)
+    }
+  },
+  mixins: [ getFeatured ],
   setup() {
     onMounted(() => {
       const carousel = new Swiper('.carousel', {

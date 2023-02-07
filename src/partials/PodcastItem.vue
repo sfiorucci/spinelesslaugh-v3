@@ -25,9 +25,9 @@
 <script>
 
 import CategoryJSON from '../data/categories.json'
-import matchCategory from '../mixins/matchCategory'
-import buildImagePath from '../mixins/buildImagePath'
-import formatDate from '../mixins/formatDate'
+import matchCategory from '../mixins/helpers'
+import buildImagePath from '../mixins/helpers'
+import formatDate from '../mixins/helpers'
 
 export default {
   name: 'PodcastItem',
@@ -47,8 +47,7 @@ export default {
       return CategoryJSON
     },
     setCategoryInfo() {
-      const categories = this.filters
-      const category = this.matchCategory(categories, this.item)
+      const category = this.matchCategory(this.filters, this.item)
       
       let info = {
         color: {

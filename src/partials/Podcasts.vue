@@ -38,7 +38,7 @@ import PodcastItem from '../partials/PodcastItem.vue'
 import CategoryJSON from '../data/categories.json'
 import ReleaseJSON from '../data/releases.json'
 import Filter from "../components/FilterButton.vue"
-import sortByDate from '../mixins/sortByDate'
+import sortByDate from '../mixins/helpers'
 
 export default {
   name: 'Podcasts',
