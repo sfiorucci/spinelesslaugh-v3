@@ -22,8 +22,8 @@ export default {
       
       return featuredItems
     },
-    buildImagePath(path, slug, format) {
-      return `https://www.spinelesslaugh.com/${path}/${slug}.${format}`
+    buildImagePath(path, slug, ratio, format) {
+      return `https://www.spinelesslaugh.com/${path}/${ratio}/${slug}.${format}`
     },
     setCategoryInfo(categories, item) {
       const category = this.matchCategory(categories, item)

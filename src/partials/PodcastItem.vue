@@ -1,7 +1,7 @@
 <template>
   <div class="sm:flex items-center p-5 border-b border-slate-100" v-show="['All', item.category].includes(category)">
     <div class="flex items-start mb-4 sm:mb-0">
-      <div class="shrink-0 ml-5 sm:ml-0 sm:mr-8 order-1 sm:order-none"><router-link :to="item.slug"><img class="rounded" :src="this.buildImagePath(item.path.image, item.slug, 'jpg')" width="128" height="128" :alt="item.title" /></router-link></div>
+      <div class="shrink-0 ml-5 sm:ml-0 sm:mr-8 order-1 sm:order-none"><router-link :to="item.slug"><img class="rounded" :src="this.buildImagePath(item.path.image, item.slug, 'square', 'jpg')" width="128" height="128" :alt="item.title" /></router-link></div>
       <div>
         <h3 class="font-hkgrotesk font-extrabold text-lg mb-1">
           <router-link :class="setCategoryInfo(this.filters, this.item).color.hover" class="text-slate-800 transition duration-150 ease-in-out" :to="item.slug">{{item.title}}</router-link>

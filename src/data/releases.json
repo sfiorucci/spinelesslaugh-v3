@@ -1,7 +1,7 @@
 [
   {
     "path": {
-      "image": "music/mixtapes/images/square",
+      "image": "music/mixtapes/images",
       "audio": "music/mixtapes/audio"
     },
     "title": "Top 100 (best songs of 2022)",
@@ -13,7 +13,7 @@
   },
   {
     "path": {
-      "image": "music/mixes/images/square",
+      "image": "music/mixes/images",
       "audio": "music/mixes/audio"
     },
     "title": "MixMag 2010-2019",
@@ -25,7 +25,7 @@
   },
   {
     "path": {
-      "image": "music/remixes/images/square",
+      "image": "music/remixes/images",
       "audio": "music/remixes/audio"
     },
     "title": "The Last Big Impezzo (white rain remix)",
@@ -37,7 +37,7 @@
   },
   {
     "path": {
-      "image": "music/tunes/images/square",
+      "image": "music/tunes/images",
       "audio": "music/tunes/audio"
     },
     "title": "Bad Aesthetics",
@@ -49,7 +49,7 @@
   },
   {
     "path": {
-      "image": "music/remixes/images/square",
+      "image": "music/remixes/images",
       "audio": "music/remixes/audio"
     },
     "title": "The Sun (numbers remix)",
@@ -61,7 +61,7 @@
   },
   {
     "path": {
-      "image": "music/tunes/images/square",
+      "image": "music/tunes/images",
       "audio": "music/tunes/audio"
     },
     "title": "US2Know",
@@ -73,7 +73,7 @@
   },
   {
     "path": {
-      "image": "music/mixtapes/images/square",
+      "image": "music/mixtapes/images",
       "audio": "music/mixtapes/audio"
     },
     "title": "Top 90 (best songs of 2021)",
@@ -85,7 +85,7 @@
   },
   {
     "path": {
-      "image": "music/mixtapes/images/square",
+      "image": "music/mixtapes/images",
       "audio": "music/mixtapes/audio"
     },
     "title": "Top 100 (best songs of 2020)",
