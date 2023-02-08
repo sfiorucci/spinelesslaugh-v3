@@ -4,10 +4,24 @@
       "image": "music/mixtapes/images",
       "audio": "music/mixtapes/audio"
     },
+    "title": "Top 100 (best songs of 2019)",
+    "slug": "top-100-2019-best-songs",
+    "date": "2019-12-31",
+    "category": "Mixtapes",
+    "duration": "6:40:44",
+    "excerpt":
+      "A massive 6½-hour mixtape with 100 great songs out in 20219. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
+  },
+  {
+    "path": {
+      "image": "music/mixtapes/images",
+      "audio": "music/mixtapes/audio"
+    },
     "title": "Top 100 (best songs of 2022)",
     "slug": "top-100-2022-best-songs",
     "date": "2022-12-31",
     "category": "Mixtapes",
+    "duration": "6:12:20",
     "excerpt":
       "A massive 6½-hour mixtape with 100 great songs out in 2022. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   },
@@ -20,8 +34,48 @@
     "slug": "mixmag-2010-2019-best-techno",
     "date": "2020-04-24",
     "category": "Mixes",
+    "duration": "1:43:45",
     "excerpt":
       "A time machine, a look from the 2020's pandemic to the past 10 years. 20 of the best techno tracks of the decade, selected by MixMag & mixed by Spineless Laugh in strict chronological order."
+  },
+  {
+    "path": {
+      "image": "music/mixes/images",
+      "audio": "music/mixes/audio"
+    },
+    "title": "Sweet Ignorance",
+    "slug": "sweet-ignorance",
+    "date": "2015-08-23",
+    "category": "Mixes",
+    "duration": "1:10:12",
+    "excerpt":
+      "Emotional blindness as a blessing and the sweet bliss of ignorance: an electronic mixtape about drugs, cookies and the healing taste of what is better not to know. Don't ask yourself why they picked you. They didn't. You did."
+  },
+  {
+    "path": {
+      "image": "music/mixes/images",
+      "audio": "music/mixes/audio"
+    },
+    "title": "Comedowns",
+    "slug": "comedowns",
+    "date": "2011-09-21",
+    "category": "Mixes",
+    "duration": "41:45",
+    "excerpt":
+      "Spineless Laugh's debut EP, merged in a single mix. A strange kind of electronic: asynchronous and obsessive, mechanic and almost industrial. The perfect soundtrack for your sweetest nightmares, a unique sonic adventure subdivided into six sad stories."
+  },
+  {
+    "path": {
+      "image": "music/mixes/images",
+      "audio": "music/mixes/audio"
+    },
+    "title": "Exxence",
+    "slug": "exxence",
+    "date": "2011-12-20",
+    "category": "Mixes",
+    "duration": "1:18:13",
+    "excerpt":
+      "A collaboration between Spineless Media and Filigran Records. The original compilation selected by the label honcho and A&R Adnan Duric, smoothly mixed by Spineless Laugh and ready for your old-skool parties."
   },
   {
     "path": {
@@ -32,6 +86,7 @@
     "slug": "the-last-big-impezzo-white-rain-remix",
     "date": "2015-11-05",
     "category": "Remixes",
+    "duration": "6:56",
     "excerpt":
       "A deep dive from original chaos to unfaithful calm and sharp melodies. Everything following a quite long path of noisy but tight kickdrum danceability."
   },
@@ -44,6 +99,7 @@
     "slug": "bad-aesthetics",
     "date": "2013-06-28",
     "category": "Tunes",
+    "duration": "7:24",
     "excerpt":
       "A hot cup full of dubstep, lust, and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis of how shouldn't be so hard to have a nice day, and how actually is. Finally."
   },
@@ -56,8 +112,48 @@
     "slug": "the-sun-numbers-remix",
     "date": "2012-03-25",
     "category": "Remixes",
+    "duration": "5:06",
     "excerpt":
       "You and me. The sun and an overwhelming rage looming. House beats, funky synths, 8-bit computer noises. Fractured voices, decomposed to be re-combined along multiple layers. Rising, then falling. Like the sun broken into cold numbers."
+  },
+  {
+    "path": {
+      "image": "music/remixes/images",
+      "audio": "music/remixes/audio"
+    },
+    "title": "Time For Shopping (special offer rmx)",
+    "slug": "time-for-shopping-special-offer-rmx",
+    "date": "2009-06-05",
+    "category": "Remixes",
+    "duration": "3:08",
+    "excerpt":
+      "The trade of relationships. Buy and selling feelings. 8 bit ecommerce love before Amazon, swooshy swipes before Tinder. The club is closing, the night is still young, and emotions for sale. I have the time for you now, but it's not quality time."
+  },
+  {
+    "path": {
+      "image": "music/remixes/images",
+      "audio": "music/remixes/audio"
+    },
+    "title": "Nude (postfabric remix)",
+    "slug": "nude-postfabric-remix",
+    "date": "2008-04-04",
+    "category": "Remixes",
+    "duration": "4:41",
+    "excerpt":
+      "Don't get any big ideas: they're gonna glitch into disjointed arpeggios. Beauty sampled asynchronously, but there's something missing, something's off the rails. If we all have to go to hell, let's make sure our minds think dirty."
+  },
+  {
+    "path": {
+      "image": "music/remixes/images",
+      "audio": "music/remixes/audio"
+    },
+    "title": "Reckoner (d-stance remix)",
+    "slug": "reckoner-d-stance-remix",
+    "date": "2008-10-07",
+    "category": "Remixes",
+    "duration": "7:37",
+    "excerpt":
+      "Like ripples on a blank shore, synthetic tears separate into echoes of electric pianos and drum machines. No one's to blame. Melodic guitar samples are bittersweet distractors that fill some final gaps. Dedicated to all human beings, and robots too."
   },
   {
     "path": {
@@ -68,8 +164,35 @@
     "slug": "us2know",
     "date": "2012-03-27",
     "category": "Tunes",
+    "duration": "5:20",
     "excerpt":
-      "Have you ever had the experience of losing reference points through blurred memories and the now undefined shape of what you used to know? A trancestep dubtempo filled with tremolo synths, numbed beats, and pieces of word repeated as a ping-pong delayed mantra."
+      "Have you ever had the experience of losing reference points through blurred memories of what you used to know? A trancestep dubtempo filled with tremolo synths, numbed beats, and pieces of word repeated as a ping-pong delayed mantra."
+  },
+  {
+    "path": {
+      "image": "music/tunes/images",
+      "audio": "music/tunes/audio"
+    },
+    "title": "Geisha (a seaside tragedy in slow motion)",
+    "slug": "geisha",
+    "date": "2009-02-20",
+    "category": "Tunes",
+    "duration": "9:19",
+    "excerpt":
+      "Yet another electronic triptych. It's about beauty, slavery, misconception, and every other demon a relationship between humans can summon. Three parts, seamlessly blended, to match apprentice Geishas stages of training."
+  },
+  {
+    "path": {
+      "image": "music/tunes/images",
+      "audio": "music/tunes/audio"
+    },
+    "title": "Emotional Chrysalis (a cinematic trilogy)",
+    "slug": "emotional-chrysalis",
+    "date": "2005-08-11",
+    "category": "Tunes",
+    "duration": "11:12",
+    "excerpt":
+      "An electronic opera in three parts, aiming to track down the ancient algorithm of building beauty from scratch. First, casting caterpillar. Then, editing chrysalis and contemplating the J-formation process. Last, mixing the final butterfly in motion."
   },
   {
     "path": {
@@ -80,6 +203,7 @@
     "slug": "top-90-2021-best-songs",
     "date": "2021-12-31",
     "category": "Mixtapes",
+    "duration": "5:49:06",
     "excerpt":
       "A massive nearly-6-hour mixtape with 90 great songs out in 2021. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   },
@@ -92,6 +216,7 @@
     "slug": "top-100-2020-best-songs",
     "date": "2020-12-31",
     "category": "Mixtapes",
+    "duration": "6:29:49",
     "excerpt":
       "A massive 6½-hour mixtape with 100 great songs out in 2020. A senseless, sketchy, and imperfect unordered selection by Spineless Laugh that surprisingly set up to be the hugest Best Of playlist of the year."
   }

@@ -2,12 +2,13 @@
   <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
     <router-link :to="release.slug">
       <div>
-        <div :class="this.setCategoryInfo(this.categories, release).color.bg" class="absolute inset-0 -z-10 rounded-3xl mix-blend-multiply">
-          <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="this.buildImagePath(release.path.image, release.slug, 'bw-fade', 'jpg')" width="446" height="200" alt="Carousel 01" />
+        <div :class="setCategoryInfo(categories, release).color.bg" class="absolute inset-0 -z-10 rounded-3xl mix-blend-multiply">
+          <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, release.slug, 'bw-fade', 'jpg')" width="446" height="200" alt="Carousel 01" />
         </div>
         <div class="p-5 pb-14">
           <div class="font-hkgrotesk font-extrabold text-white text-xl leading-tight mb-1">{{ release.title }}</div>
-          <div class="font-hkgrotesk text-white font-medium text-sm opacity-80 mb-4">{{ release.category }} · {{ this.formatDate(release.date) }} · {{ this.setCategoryInfo(this.categories, release).color.bg }}</div>
+          <div class="font-hkgrotesk text-white font-medium text-sm opacity-80 mb-4">{{ release.category }} · {{ formatDate(release.date) }}
+          </div>
           <img src="../images/play.svg" width="48" height="48" alt="Play" aria-hidden="true" />
         </div>
       </div>

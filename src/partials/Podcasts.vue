@@ -5,8 +5,7 @@
 
         <!-- Section header -->
         <div class="md:flex justify-between items-center mb-8">
-          <h2 class="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4 md:mb-0">All {{ setArchiveTitle }}</h2>
-          <p>{{ releases.category }}</p>
+          <h2 class="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4 md:mb-0">All {{ setArchiveTitle }} ({{ releases.length }})</h2>
           
           <!-- Filters -->
           <div class="flex flex-wrap -m-1">
