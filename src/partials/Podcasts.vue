@@ -5,7 +5,7 @@
 
         <!-- Section header -->
         <div class="md:flex justify-between items-center mb-8">
-          <h2 class="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4 md:mb-0">All {{ setArchiveTitle }} ({{ releases.length }})</h2>
+          <h2 class="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4 md:mb-0">All {{ setArchiveTitle(category, releases).text }} ({{ setArchiveTitle(category, releases).count }})</h2>
           
           <!-- Filters -->
           <div class="flex flex-wrap -m-1">
@@ -38,6 +38,7 @@ import CategoryJSON from '../data/categories.json'
 import ReleaseJSON from '../data/releases.json'
 import Filter from "../components/FilterButton.vue"
 import sortByDate from '../mixins/helpers'
+import setArchiveTitle from '../mixins/helpers'
 
 export default {
   name: 'Podcasts',
@@ -51,15 +52,9 @@ export default {
     },
     releases() {
       return this.sortByDate(ReleaseJSON, 'desc')
-    },
-    setArchiveTitle() {
-      let title = ''
-      this.category === 'All' ? title = 'releases' : title = this.category.toLowerCase()
-      
-      return title
     }
   },
-  mixins: [ sortByDate ],
+  mixins: [ sortByDate, setArchiveTitle ],
   setup() {
     const category = ref('All')  
 

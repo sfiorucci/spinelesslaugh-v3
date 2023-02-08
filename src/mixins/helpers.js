@@ -13,6 +13,9 @@ export default {
     matchCategory(categories, item) {
       return _.find(categories, [ 'name', item.category ])
     },
+    filterReleases(key, items) {
+      return _.filter(items, { 'category': key })
+    },
     getFeatured(keys, items) {
       let featuredItems = []
       keys.map(i => {
@@ -24,6 +27,23 @@ export default {
     },
     buildImagePath(path, slug, ratio, format) {
       return `https://www.spinelesslaugh.com/${path}/${ratio}/${slug}.${format}`
+    },
+    setArchiveTitle(key, items) {
+      let title = {
+        'text': '',
+        'count': ''
+      }
+      key === 'All' ? 
+        title = {
+          'text': 'releases',
+          'count': items.length
+        } : 
+        title = {
+          'text': key.toLowerCase(),
+          'count': this.filterReleases(key, items).length
+        } 
+      
+      return title
     },
     setCategoryInfo(categories, item) {
       const category = this.matchCategory(categories, item)
