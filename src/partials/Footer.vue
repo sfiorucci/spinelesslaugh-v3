@@ -10,7 +10,7 @@
               <router-link class="inline-flex mb-2 md:mb-0" to="/" aria-label="Spineless Laugh">
                 <img src="../images/logo-gradient.svg" width="36" height="28" alt="Logo" />
               </router-link>
-              <div class="text-sm text-slate-500 ml-4">Copyright © Spineless Laugh <span class="text-slate-300">·</span> All rights reserved <span class="md:hidden lg:inline"> <span class="text-slate-300">·</span>  2003<span class="text-slate-400 tracking-normal mx-1">-&gt;</span>{{ currentYear }}</span></div>
+              <div class="text-sm text-slate-500 ml-4">Copyright © Spineless Laugh <span class="text-slate-300">·</span> All rights reserved <span class="md:hidden lg:inline"> <span class="text-slate-300">·</span>  2003<span class="text-slate-4open00 tracking-normal mx-1">-&gt;</span>{{ currentYear }}</span></div>
             </div>
           </div>
           <!-- Social links -->
