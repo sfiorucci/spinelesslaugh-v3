@@ -10,9 +10,9 @@
       <Hero />
       <Carousel />
       <Podcasts />
-      <Hosts />
+      <!-- <Hosts />
       <Testimonials />
-      <Cta />
+      <Cta /> -->
 
     </main>
     
@@ -27,9 +27,9 @@ import Header from '../partials/Header.vue'
 import Hero from '../partials/Hero.vue'
 import Carousel from '../partials/Carousel.vue'
 import Podcasts from '../partials/Podcasts.vue'
-import Hosts from '../partials/Hosts.vue'
-import Testimonials from '../partials/Testimonials.vue'
-import Cta from '../partials/Cta.vue'
+// import Hosts from '../partials/Hosts.vue'
+// import Testimonials from '../partials/Testimonials.vue'
+// import Cta from '../partials/Cta.vue'
 import Footer from '../partials/Footer.vue'
 
 export default {
@@ -39,9 +39,9 @@ export default {
     Hero,
     Carousel,
     Podcasts,
-    Hosts,
-    Testimonials,
-    Cta,
+    // Hosts,
+    // Testimonials,
+    // Cta,
     Footer,
   },
 }

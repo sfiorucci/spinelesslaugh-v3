@@ -3,6 +3,8 @@
     "slug": "tunes",
     "name": "Tunes",
     "url": "/tunes",
+    "excerpt":
+      "Spineless Laugh's original productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch.",
     "color": {
       "background": "bg-teal-500",
       "buttonHover": "hover:bg-teal-600",
@@ -16,6 +18,8 @@
     "slug": "remixes",
     "name": "Remixes",
     "url": "/remixes",
+    "excerpt":
+      "Spineless Laugh's studio remixes: pick a song you like and make it yours. Sometimes telling others' stories out loud can be the best way to tell your own.",
     "color": {
       "background": "bg-sky-500",
       "buttonHover": "hover:bg-sky-600",
@@ -29,6 +33,8 @@
     "slug": "mixes",
     "name": "Mixes",
     "url": "/mixes",
+    "excerpt":
+      "Spineless Laugh's studio mixes: the art of warping, blending, fine tuning, and make a bunch of songs a whole, immersive, unbroken listening experience.",
     "color": {
       "background": "bg-violet-500",
       "buttonHover": "hover:bg-violet-600",
@@ -42,6 +48,8 @@
     "slug": "mixtapes",
     "name": "Mixtapes",
     "url": "/mixtapes",
+    "excerpt":
+      "Spineless Laugh's playlists, and mixtapes: whether it's a Spotify selection or a hand-delivered cassette, there are many ways to tell stories with carfully curated collections of songs, one after the other, in the right order.",
     "color": {
       "background": "bg-pink-500",
       "buttonHover": "hover:bg-pink-600",
