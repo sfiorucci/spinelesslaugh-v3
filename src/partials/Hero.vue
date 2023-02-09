@@ -1,13 +1,13 @@
 <template>
   <section class="relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="pt-16 pb-12 md:pt-40 md:pb-20">
+      <div class="pt-0 pb-0 md:pt-20 md:pb-20">
 
         <!-- Content -->
-        <div class="relative max-w-xl mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">
+        <div class="relative pb-0 max-w-xl mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">
 
           <!-- Background -->
-          <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -mx-20 -z-10 overflow-hidden mb-12 mt-0 md:mb-0" aria-hidden="true">
+          <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -mx-20 -z-10 overflow-hidden mb-0 mt-0 md:mb-0" aria-hidden="true">
 
             <!-- Illustration -->
             <div class="absolute -top-16 left-1/2 -translate-x-1/3 md:-translate-x-1/2 pointer-events-none -z-10 blur-2xl">
@@ -41,7 +41,7 @@
             <p class="text-xl text-transparent bg-clip-text bg-gradient-to-t from-slate-400 to-white mb-12" data-aos="fade-right" data-aos-delay="200">Spineless Laugh is beats & bytes: audio editor, producer, sound manipulator. This is the one and only place for all things SL: songs, remixes, mixtapes, playlists, and any other audio experiment.</p>
 
             <!-- Buttons -->
-            <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="300">
+            <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-start space-y-6 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="300">
               <Button v-for="category in categories" :key="category.slug"
                 :label="category.name"
                 :url="category.url"
@@ -56,7 +56,7 @@
           <!-- Image -->
           <div class="max-w-sm mx-auto md:max-w-none md:absolute md:left-[40rem] md:top-1/2 md:-translate-y-1/2 md:ml-8 lg:ml-20 xl:ml-32">
             <div data-aos="fade-left" data-aos-duration="1100">
-              <img src="../images/iphone.png" class="md:max-w-none" width="298" height="601" alt="iPhone" />
+              <img src="../images/iphone.png" class="hidden md:flex md:max-w-none" width="298" height="601" alt="iPhone" />
             </div>
           </div>
 

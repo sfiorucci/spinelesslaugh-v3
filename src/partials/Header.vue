@@ -1,29 +1,17 @@
 <template>
-  <header class="absolute w-full z-30">
+  <header class="hidden md:inline w-full z-30">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-16 md:h-20">
+      <div class="flex items-center justify-between h-16 md:h-36">
   
         <!-- Site branding -->
-        <div class="shrink-0 mr-4">
+        <div class="shrink-0 mr-4 md:mt-4">
           <!-- Logo -->
-          <router-link class="block group" to="/" aria-label="Cruip">
-            <img src="../images/logo.svg" width="36" height="28" alt="Logo" />
+          <router-link class="group flex flex-row" to="/" aria-label="Spineless Laugh">
+            <img src="../images/logo-gradient.svg" class="w-14 transition duration-500 ease-in-out delay-150 hover:rotate-180" alt="Logo" />
+            <div class="text-3xl pl-4 pt-2 transition duration-500 ease-in-out font-bold font-hkgrotesk text-slate-800 hover:text-slate-500">Spineless Laugh</div>
+            <!-- <div class="text-4xl pl-4 pt-2 transition duration-500 ease-in-out font-bold font-hkgrotesk text-slate-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-teal-500 hover:via-sky-500 hover:to-pink-500">Spineless Laugh</div> -->
           </router-link>
         </div>
-  
-        <!-- Desktop navigation -->
-        <!-- <nav class="flex grow"> -->
-  
-          <!-- Desktop sign in links -->
-          <!-- <ul class="flex grow justify-end flex-wrap items-center">
-            <li>
-              <router-link class="btn-sm text-white bg-teal-500 hover:bg-teal-600 group shadow-sm" to="/subscribe">
-                Latest release <span class="tracking-normal text-teal-100 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
-              </router-link>
-            </li>
-          </ul>
-  
-        </nav> -->
   
       </div>
     </div>

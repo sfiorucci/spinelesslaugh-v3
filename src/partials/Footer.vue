@@ -7,10 +7,10 @@
           <div class="mb-4 md:mb-0">
             <div class="shrink-0 flex flex-col md:flex-row items-center">
               <!-- Logo -->
-              <router-link class="inline-flex mb-2 md:mb-0" to="/" aria-label="Spineless Laugh">
-                <img src="../images/logo-gradient.svg" width="36" height="28" alt="Logo" />
+              <router-link class="inline-flex mb-6 md:mb-0" to="/" aria-label="Spineless Laugh">
+                <img src="../images/logo-gradient.svg" class="w-12 h-12 md:w-9 md:h-9" alt="Logo" />
               </router-link>
-              <div class="text-sm text-slate-500 ml-4">Copyright © Spineless Laugh <span class="text-slate-300">·</span> All rights reserved <span class="md:hidden lg:inline"> <span class="text-slate-300">·</span>  2003<span class="text-slate-4open00 tracking-normal mx-1">-&gt;</span>{{ currentYear }}</span></div>
+              <div class="text-sm text-slate-500 ml-4">Copyright © Spineless Laugh <span class="hidden md:inline text-slate-300">·</span><span class="hidden md:inline"> All rights reserved </span><span class="md:hidden lg:inline"> <span class="text-slate-300">·</span>  2003<span class="text-slate-4open00 tracking-normal mx-1">-&gt;</span>{{ currentYear }}</span></div>
             </div>
           </div>
           <!-- Social links -->
