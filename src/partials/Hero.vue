@@ -54,9 +54,9 @@
           </div>
 
           <!-- Image -->
-          <div class="max-w-sm mx-auto md:max-w-none md:absolute md:left-[40rem] md:top-1/2 md:-translate-y-1/2 md:ml-8 lg:ml-20 xl:ml-32">
-            <div data-aos="fade-left" data-aos-duration="1100">
-              <img src="../images/iphone.png" class="hidden md:flex md:max-w-none" width="298" height="601" alt="iPhone" />
+          <div class="max-w-sm mx-auto md:max-w-none md:absolute md:left-[36rem] md:top-1/2 md:-translate-y-1/2 md:ml-8 lg:ml-20 xl:ml-32">
+            <div data-aos="fade-left" data-aos-duration="2000">
+              <img src="../images/studio.png" class="hidden md:flex md:max-w-none" width="401" height="601" alt="studio" />
             </div>
           </div>
 
