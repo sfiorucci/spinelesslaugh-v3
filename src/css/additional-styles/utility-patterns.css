@@ -25,6 +25,16 @@
     }
 }
 
+/* Logo */
+
+#glyph:hover + #logotype {
+    @apply transition duration-500 ease-in-out text-slate-500;
+}
+
+#logo:hover #glyph {
+    @apply transition duration-500 delay-150 ease-in-out rotate-180;
+}
+
 /* Buttons */
 .btn,
 .btn-sm {
