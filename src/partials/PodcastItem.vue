@@ -1,7 +1,7 @@
 <template>
-  <div class="sm:flex items-center p-5 border-b border-slate-100" v-show="['All', item.category].includes(category)">
-    <div class="flex items-start mb-4 sm:mb-0">
-      <div class="shrink-0 ml-5 sm:ml-0 sm:mr-8 order-1 sm:order-none"><router-link :to="item.slug"><img class="rounded" :src="buildImagePath(item.path.image, item.slug, 'square', 'jpg')" width="128" height="128" :alt="item.title" /></router-link></div>
+  <div class="sm:flex items-center py-8 border-b border-slate-100" v-show="['All', item.category].includes(category)">
+    <div class="flex flex-col sm:flex-row items-start">
+      <div class="shrink-0 mb-8 sm:mb-0 sm:mr-8"><router-link :to="item.slug"><img class="rounded sm:w-36 sm:h-36" :src="buildImagePath(item.path.image, item.slug, 'square', 'jpg')" :alt="item.title" /></router-link></div>
       <div>
         <h3 class="font-hkgrotesk font-extrabold text-lg mb-1">
           <router-link :class="setCategoryInfo(filters, item).color.hover" class="text-slate-800 transition duration-150 ease-in-out" :to="item.slug">{{ item.title }}</router-link>
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="shrink-0 sm:ml-8">
+    <div class="hidden sm:flex shrink-0 sm:ml-10">
       <router-link :to="item.slug" aria-label="play">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" :fill="setCategoryInfo(filters, item).color.hex" /><path fill="#FFF" fill-rule="nonzero" d="M17.783 14.088A.5.5 0 0 0 17 14.5v11a.5.5 0 0 0 .783.412l8-5.5a.5.5 0 0 0 0-.824l-8-5.5Z"/></g></svg>
       </router-link>
