@@ -13,7 +13,7 @@
         :imageUrl="buildImagePath(category.imagePath, 'category', category.slug, 'png')"
       />
       <Carousel />
-      <Releases />
+      <Releases :list="list" />
 
     </main>
     
@@ -43,6 +43,10 @@ export default {
   props: {
     category: {
       type: Object,
+      required: true
+    },
+    list: {
+      type: Array,
       required: true
     }
   },

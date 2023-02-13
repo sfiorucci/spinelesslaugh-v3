@@ -4,7 +4,7 @@
       <div class="py-12 md:py-20">
 
         <!-- Section header -->
-        <div class="md:flex justify-between items-center mb-8">
+        <div class="md:flex justify-between items-center mb-4">
           <h2 class="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4 md:mb-0">All {{ setArchiveTitle(category, releases).text }} ({{ setArchiveTitle(category, releases).count }})</h2>
           
           <!-- Filters -->
