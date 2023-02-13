@@ -7,7 +7,11 @@
     <!-- Page content -->
     <main class="grow">
 
-      <Hero />
+      <HeroCategory
+        :title="category.name"
+        :description="category.excerpt"
+        :imageUrl="buildImagePath(category.imagePath, 'category', category.slug, 'png')"
+      />
       <Carousel />
       <Podcasts />
 
@@ -21,19 +25,27 @@
 
 <script>
 import Header from '../partials/Header.vue'
-import Hero from '../partials/Hero.vue'
+import HeroCategory from '../partials/HeroCategory.vue'
 import Carousel from '../partials/Carousel.vue'
 import Podcasts from '../partials/Podcasts.vue'
 import Footer from '../partials/Footer.vue'
+import buildImagePath from '../mixins/helpers'
 
 export default {
   name: 'Home',
   components: {
     Header,
-    Hero,
+    HeroCategory,
     Carousel,
     Podcasts,
     Footer,
-  }
+  },
+  props: {
+    category: {
+      type: Object,
+      required: true
+    }
+  },
+  mixins: [ buildImagePath ]
 }
 </script>

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './pages/Home.vue'
-import Podcast from './pages/Podcast.vue'
+import Tunes from './pages/Tunes.vue'
 import Subscribe from './pages/Subscribe.vue'
 
 const routerHistory = createWebHistory()
@@ -23,19 +23,19 @@ const router = createRouter({
     },
     {
       path: '/tunes',
-      component: Podcast
+      component: Tunes
     },
     {
       path: '/remixes',
-      component: Podcast
+      component: Tunes
     },
     {
       path: '/mixes',
-      component: Podcast
+      component: Tunes
     },
     {
       path: '/mixtapes',
-      component: Podcast
+      component: Tunes
     }     
   ]
 })

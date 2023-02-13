@@ -1,7 +1,7 @@
 <template>
   <div class="sm:flex items-center py-8 border-b border-slate-100" v-show="['All', item.category].includes(category)">
     <div class="flex flex-col sm:flex-row items-start">
-      <div class="shrink-0 mb-8 sm:mb-0 sm:mr-8"><router-link :to="item.slug"><img class="rounded sm:w-36 sm:h-36" :src="buildImagePath(item.path.image, item.slug, 'square', 'jpg')" :alt="item.title" /></router-link></div>
+      <div class="shrink-0 mb-8 sm:mb-0 sm:mr-8"><router-link :to="item.slug"><img class="rounded sm:w-36 sm:h-36" :src="buildImagePath(item.path.image, 'square', item.slug, 'jpg')" :alt="item.title" /></router-link></div>
       <div>
         <h3 class="font-hkgrotesk font-extrabold text-lg mb-1">
           <router-link :class="setCategoryInfo(filters, item).color.hover" class="text-slate-800 transition duration-150 ease-in-out" :to="item.slug">{{ item.title }}</router-link>
@@ -33,7 +33,7 @@ export default {
   name: 'PodcastItem',
   props: {
     item: {
-      type: String,
+      type: Object,
       required: true
     },
     category: {

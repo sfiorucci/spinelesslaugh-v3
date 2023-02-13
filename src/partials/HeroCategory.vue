@@ -37,17 +37,17 @@
           <div class="md:w-[640px] py-12 md:py-20 md:min-h-[480px]">
 
             <!-- Copy -->
-            <h1 class="h1 font-hkgrotesk text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-white mb-8" data-aos="fade-right" data-aos-delay="100">All things<br/><span class="text-slate-50">Spineless Laugh</span></h1>
-            <p class="text-xl text-transparent bg-clip-text bg-gradient-to-t from-slate-400 to-white mb-12" data-aos="fade-right" data-aos-delay="200">Spineless Laugh is beats & bytes: audio editor, producer, sound manipulator. This is the one and only place for all things SL: songs, remixes, mixtapes, playlists, and any other audio experiment.</p>
+            <h1 class="h1 font-hkgrotesk text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-white mb-8" data-aos="fade-right" data-aos-delay="100">{{ title }}<br/><span class="text-slate-50">and good vibes</span></h1>
+            <p class="text-xl text-transparent bg-clip-text bg-gradient-to-t from-slate-400 to-white mb-12" data-aos="fade-right" data-aos-delay="200">{{ description }}</p>
 
             <!-- Buttons -->
             <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-start space-y-6 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="300">
-              <Button v-for="category in categories" :key="category.slug"
-                :label="category.name"
-                :url="category.url"
-                :backgroundColor="category.color.background"
-                :hoverColor="category.color.buttonHover"
-                :arrowColor="category.color.arrow"
+              <Button
+                label="All releases"
+                url="/"
+                backgroundColor="bg-slate-500"
+                hoverColor="hover:bg-slate-600"
+                arrowColor="text-slate-200"
               />
             </div>
 
@@ -56,7 +56,7 @@
           <!-- Image -->
           <div class="max-w-sm mx-auto md:max-w-none md:absolute md:left-[36rem] md:top-1/2 md:-translate-y-1/2 md:ml-8 lg:ml-20 xl:ml-32">
             <div data-aos="fade-left" data-aos-duration="2000">
-              <img src="../images/dj-silhouette.png" class="hidden md:flex md:max-w-none" width="401" height="601" alt="studio" />
+              <img :src="imageUrl" class="hidden md:flex md:max-w-none" width="401" height="601" alt="studio" />
             </div>
           </div>
 
@@ -68,7 +68,6 @@
 
 <script>
 
-import CategoryJSON from '../data/categories.json'
 import Button from "../components/HeroButton.vue"
 
 export default {
@@ -76,9 +75,18 @@ export default {
   components: {
     Button
   },
-  computed: {
-    categories() {
-      return CategoryJSON
+  props: {
+    title:{
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    imageUrl: {
+      type: String,
+      required: true
     }
   }
 }

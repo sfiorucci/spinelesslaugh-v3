@@ -10,8 +10,11 @@ export default {
     sortByDate(items, order) {
       return _.orderBy(items, d => d.date, order);
     },
-    matchCategory(categories, item) {
+    matchItemCategory(categories, item) {
       return _.find(categories, [ 'name', item.category ])
+    },
+    matchCategory(categories, key) {
+      return _.find(categories, [ 'name', key ])
     },
     filterReleases(key, items) {
       return _.filter(items, { 'category': key })
@@ -25,7 +28,7 @@ export default {
       
       return featuredItems
     },
-    buildImagePath(path, slug, ratio, format) {
+    buildImagePath(path, ratio, slug, format) {
       return `https://www.spinelesslaugh.com/${path}/${ratio}/${slug}.${format}`
     },
     setArchiveTitle(key, items) {
@@ -46,7 +49,7 @@ export default {
       return title
     },
     setCategoryInfo(categories, item) {
-      const category = this.matchCategory(categories, item)
+      const category = this.matchItemCategory(categories, item)
       
       let info = {
         color: {
