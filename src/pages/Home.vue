@@ -9,7 +9,7 @@
 
       <Hero />
       <Carousel />
-      <Podcasts />
+      <Releases />
 
     </main>
     
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import Header from '../partials/Header.vue'
+import Header from '../partials/layout/Header.vue'
 import Hero from '../partials/Hero.vue'
 import Carousel from '../partials/Carousel.vue'
-import Podcasts from '../partials/Podcasts.vue'
-import Footer from '../partials/Footer.vue'
+import Releases from '../partials/home/Releases.vue'
+import Footer from '../partials/layout/Footer.vue'
 
 export default {
   name: 'Home',
@@ -32,7 +32,7 @@ export default {
     Header,
     Hero,
     Carousel,
-    Podcasts,
+    Releases,
     Footer,
   }
 }

@@ -15,68 +15,6 @@
               <CarouselItem v-for="featuredRelease in getFeaturedReleases" :key="featuredRelease.slug"
                 :release="featuredRelease"
               />
-              <!-- <CarouselItem v-for="featuredRelease in getFeaturedReleases" :key="featuredRelease.slug"
-                :url="featuredRelease.slug"
-                :title="featuredRelease.title"
-                :category="featuredRelease.category"
-                :date="this.formatDate(featuredRelease.date)"
-              /> -->
-              <!-- <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
-                <router-link to="/podcast">
-                  <div>
-                    <div class="absolute inset-0 -z-10">
-                      <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-01.png" width="446" height="200" alt="Carousel 01" />
-                    </div>
-                    <div class="p-5 pb-14">
-                      <div class="font-hkgrotesk font-extrabold text-white text-xl leading-tight mb-1">Sick Leave for Indie Founders?</div>
-                      <div class="font-hkgrotesk text-white font-medium text-sm opacity-80 mb-4">Indie Stories · Jan 24 · Episode 234</div>
-                      <img src="../images/play.svg" width="48" height="48" alt="Play" aria-hidden="true" />
-                    </div>
-                  </div>
-                </router-link>
-              </div>
-              <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
-                <router-link to="/podcast">
-                  <div>
-                    <div class="absolute inset-0 -z-10">
-                      <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-02.png" width="446" height="200" alt="Carousel 02" />
-                    </div>
-                    <div class="p-5 pb-14">
-                      <div class="font-hkgrotesk font-extrabold text-white text-xl leading-tight mb-1">When Should You Let People Pay You?</div>
-                      <div class="font-hkgrotesk text-white font-medium text-sm opacity-80 mb-4">Indie Stories · Jan 24 · Episode 234</div>
-                      <img src="../images/play.svg" width="48" height="48" alt="Play" aria-hidden="true" />
-                    </div>
-                  </div>
-                </router-link>
-              </div>
-              <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
-                <router-link to="/podcast">
-                  <div>
-                    <div class="absolute inset-0 -z-10">
-                      <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-03.png" width="446" height="200" alt="Carousel 03" />
-                    </div>
-                    <div class="p-5 pb-14">
-                      <div class="font-hkgrotesk font-extrabold text-white text-xl leading-tight mb-1">Super Pumped (aka The Saturday Edition)</div>
-                      <div class="font-hkgrotesk text-white font-medium text-sm opacity-80 mb-4">Indie Stories · Jan 24 · Episode 234</div>
-                      <img src="../images/play.svg" width="48" height="48" alt="Play" aria-hidden="true" />
-                    </div>
-                  </div>
-                </router-link>
-              </div>
-              <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
-                <router-link to="/podcast">
-                  <div>
-                    <div class="absolute inset-0 -z-10">
-                      <img class="w-full h-full object-cover rounded-3xl" src="../images/carousel-04.png" width="446" height="200" alt="Carousel 04" />
-                    </div>
-                    <div class="p-5 pb-14">
-                      <div class="font-hkgrotesk font-extrabold text-white text-xl leading-tight mb-1">Getting Into Public</div>
-                      <div class="font-hkgrotesk text-white font-medium text-sm opacity-80 mb-4">Indie Stories · Jan 24 · Episode 234</div>
-                      <img src="../images/play.svg" width="48" height="48" alt="Play" aria-hidden="true" />
-                    </div>
-                  </div>
-                </router-link>
-              </div> -->
             </div>
           </div>
 

@@ -144,7 +144,7 @@ import Header from '../partials/Header.vue'
 import AudioPlayer from '../partials/AudioPlayer.vue'
 import Carousel from '../partials/Carousel.vue'
 import Cta from '../partials/Cta.vue'
-import Footer from '../partials/Footer.vue'
+import Footer from '../partials/layout/Footer.vue'
 
 export default {
   name: 'Podcast',

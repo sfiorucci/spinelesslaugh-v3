@@ -13,7 +13,7 @@
         :imageUrl="buildImagePath(category.imagePath, 'category', category.slug, 'png')"
       />
       <Carousel />
-      <Podcasts />
+      <Releases />
 
     </main>
     
@@ -24,12 +24,12 @@
 </template>
 
 <script>
-import Header from '../partials/Header.vue'
-import HeroCategory from '../partials/HeroCategory.vue'
-import Carousel from '../partials/Carousel.vue'
-import Podcasts from '../partials/Podcasts.vue'
-import Footer from '../partials/Footer.vue'
-import buildImagePath from '../mixins/helpers'
+import Header from '../../partials/layout/Header.vue'
+import HeroCategory from '../../partials/category/Hero.vue'
+import Carousel from '../../partials/Carousel.vue'
+import Releases from '../../partials/category/Releases.vue'
+import Footer from '../../partials/layout/Footer.vue'
+import buildImagePath from '../../mixins/helpers'
 
 export default {
   name: 'Home',
@@ -37,7 +37,7 @@ export default {
     Header,
     HeroCategory,
     Carousel,
-    Podcasts,
+    Releases,
     Footer,
   },
   props: {

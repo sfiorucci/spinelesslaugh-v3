@@ -18,9 +18,9 @@
           </div>
         </div> 
 
-        <!-- Podcasts -->
+        <!-- Releases -->
         <div>
-          <PodcastItem v-for="release in releases" :key="release.slug"
+          <ReleaseItem v-for="release in releases" :key="release.slug"
             :item="release"
             :category="category"
           />
@@ -33,17 +33,17 @@
 
 <script>
 import { ref } from 'vue'
-import PodcastItem from '../partials/PodcastItem.vue'
-import CategoryJSON from '../data/categories.json'
-import ReleaseJSON from '../data/releases.json'
-import Filter from "../components/FilterButton.vue"
-import sortByDate from '../mixins/helpers'
-import setArchiveTitle from '../mixins/helpers'
+import ReleaseItem from '../../partials/home/ReleaseItem.vue'
+import CategoryJSON from '../../data/categories.json'
+import ReleaseJSON from '../../data/releases.json'
+import Filter from "../../components/FilterButton.vue"
+import sortByDate from '../../mixins/helpers'
+import setArchiveTitle from '../../mixins/helpers'
 
 export default {
   name: 'Podcasts',
   components: {
-    PodcastItem,
+    ReleaseItem,
     Filter,
   },
   computed: {

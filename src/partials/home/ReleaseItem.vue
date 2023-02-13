@@ -24,13 +24,13 @@
 
 <script>
 
-import CategoryJSON from '../data/categories.json'
-import buildImagePath from '../mixins/helpers'
-import formatDate from '../mixins/helpers'
-import setCategoryInfo from '../mixins/helpers'
+import CategoryJSON from '../../data/categories.json'
+import buildImagePath from '../../mixins/helpers'
+import formatDate from '../../mixins/helpers'
+import setCategoryInfo from '../../mixins/helpers'
 
 export default {
-  name: 'PodcastItem',
+  name: 'ReleaseItem',
   props: {
     item: {
       type: Object,

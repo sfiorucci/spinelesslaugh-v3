@@ -68,7 +68,7 @@
 
 <script>
 
-import Button from "../components/HeroButton.vue"
+import Button from "../../components/HeroButton.vue"
 
 export default {
   name: 'Hero',
