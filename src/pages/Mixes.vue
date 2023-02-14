@@ -11,9 +11,14 @@ import matchCategory from '../mixins/helpers'
 import filterReleases from '../mixins/helpers'
 
 export default {
-  name: 'Tunes',
+  name: 'Mixes',
   components: {
     CategoryPage,
+  },
+  data() {
+    return {
+      categoryName: 'Mixes'
+    }
   },
   computed: {
     categories() {
@@ -23,10 +28,10 @@ export default {
       return this.sortByDate(ReleaseJSON, 'desc')
     },
     currentCategory() {
-      return this.matchCategory(this.categories, 'Mixes')
+      return this.matchCategory(this.categories, this.categoryName)
     },
     filteredList() {
-      return this.filterReleases('Mixes', this.releases)
+      return this.filterReleases(this.categoryName, this.releases)
     }
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]

@@ -15,6 +15,11 @@ export default {
   components: {
     CategoryPage,
   },
+  data() {
+    return {
+      categoryName: 'Tunes'
+    }
+  },
   computed: {
     categories() {
       return CategoryJSON
@@ -23,10 +28,10 @@ export default {
       return this.sortByDate(ReleaseJSON, 'desc')
     },
     currentCategory() {
-      return this.matchCategory(this.categories, 'Tunes')
+      return this.matchCategory(this.categories, this.categoryName)
     },
     filteredList() {
-      return this.filterReleases('Tunes', this.releases)
+      return this.filterReleases(this.categoryName, this.releases)
     }
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]
