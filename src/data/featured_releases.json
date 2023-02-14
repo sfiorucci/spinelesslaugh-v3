@@ -1,18 +1,92 @@
-[
-  {
-    "slug": "bad-aesthetics",
-    "position": 0
-  },
-  {
-    "slug": "top-100-2022-best-songs",
-    "position": 1
-  },
-  {
-    "slug": "the-sun-numbers-remix",
-    "position": 2
-  },
-  {
-    "slug": "mixmag-2010-2019-best-techno",
-    "position": 3
-  }
-]
+{
+  "all": [
+    {
+      "slug": "bad-aesthetics",
+      "position": 0
+    },
+    {
+      "slug": "top-100-2022-best-songs",
+      "position": 1
+    },
+    {
+      "slug": "the-sun-numbers-remix",
+      "position": 2
+    },
+    {
+      "slug": "mixmag-2010-2019-best-techno",
+      "position": 3
+    }
+  ],
+  "tunes": [
+    {
+      "slug": "geisha",
+      "position": 0
+    },
+    {
+      "slug": "us2know",
+      "position": 1
+    },
+    {
+      "slug": "bad-aesthetics",
+      "position": 2
+    },
+    {
+      "slug": "emotional-chrysalis",
+      "position": 3
+    }
+  ],
+  "remixes": [
+    {
+      "slug": "the-sun-numbers-remix",
+      "position": 0
+    },
+    {
+      "slug": "nude-postfabric-remix",
+      "position": 1
+    },
+    {
+      "slug": "reckoner-d-stance-remix",
+      "position": 2
+    },
+    {
+      "slug": "the-last-big-impezzo-white-rain-remix",
+      "position": 3
+    }
+  ],
+  "mixes": [
+    {
+      "slug": "bad-aesthetics",
+      "position": 0
+    },
+    {
+      "slug": "top-100-2022-best-songs",
+      "position": 1
+    },
+    {
+      "slug": "the-sun-numbers-remix",
+      "position": 2
+    },
+    {
+      "slug": "mixmag-2010-2019-best-techno",
+      "position": 3
+    }
+  ],
+  "mixtapes": [
+    {
+      "slug": "bad-aesthetics",
+      "position": 0
+    },
+    {
+      "slug": "top-100-2022-best-songs",
+      "position": 1
+    },
+    {
+      "slug": "the-sun-numbers-remix",
+      "position": 2
+    },
+    {
+      "slug": "mixmag-2010-2019-best-techno",
+      "position": 3
+    }
+  ]
+}

@@ -46,6 +46,7 @@ import CarouselItem from '../partials/CarouselItem.vue'
 import ReleaseJSON from '../data/releases.json'
 import FeaturedReleaseJSON from '../data/featured_releases.json'
 import getFeatured from '../mixins/helpers'
+import matchCategory from '../mixins/helpers'
  
 // Import Swiper
 import Swiper, { Navigation } from 'swiper'
@@ -57,6 +58,12 @@ export default {
   components: {
     CarouselItem
   },
+  props: {
+    category: {
+      type: String,
+      required: true
+    }
+  },
   computed: {
     releases() {
       return ReleaseJSON
@@ -65,10 +72,11 @@ export default {
       return FeaturedReleaseJSON
     },
     getFeaturedReleases() {
-      return this.getFeatured(this.featuredReleases, this.releases)
+      const featured = this.featuredReleases[this.category]
+      return this.getFeatured(featured, this.releases)
     }
   },
-  mixins: [ getFeatured ],
+  mixins: [ getFeatured, matchCategory ],
   setup() {
     onMounted(() => {
       const carousel = new Swiper('.carousel', {

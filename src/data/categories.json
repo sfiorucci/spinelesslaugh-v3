@@ -2,6 +2,7 @@
   {
     "slug": "tunes",
     "name": "Tunes",
+    "byline": "and good vibes",
     "url": "/tunes",
     "excerpt":
       "Spineless Laugh's original productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch. Lonely, homemade, self-released pieces of music.",
@@ -18,6 +19,7 @@
   {
     "slug": "remixes",
     "name": "Remixes",
+    "byline": "and mashups",
     "url": "/remixes",
     "excerpt":
       "Spineless Laugh's studio remixes: pick a song you like and make it yours. Sometimes telling others' stories out loud can be the best way to tell your own.",
@@ -34,6 +36,7 @@
   {
     "slug": "mixes",
     "name": "Mixes",
+    "byline": "and mashups",
     "url": "/mixes",
     "excerpt":
       "Spineless Laugh's studio mixes: the art of warping, blending, fine tuning, and make a bunch of songs a whole, immersive, unbroken listening experience.",
@@ -50,6 +53,7 @@
   {
     "slug": "mixtapes",
     "name": "Mixtapes",
+    "byline": "and playlists",
     "url": "/mixtapes",
     "excerpt":
       "Spineless Laugh's playlists, and mixtapes: whether it's a Spotify selection or a hand-delivered cassette, there are many ways to tell stories with carfully curated collections of songs, one after the other, in the right order.",

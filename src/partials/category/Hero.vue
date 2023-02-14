@@ -37,7 +37,7 @@
           <div class="md:w-[640px] py-12 md:py-20 md:min-h-[480px]">
 
             <!-- Copy -->
-            <h1 class="h1 font-hkgrotesk text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-white mb-8" data-aos="fade-right" data-aos-delay="100">{{ title }}<br/><span class="text-slate-50">and good vibes</span></h1>
+            <h1 class="h1 font-hkgrotesk text-transparent bg-clip-text bg-gradient-to-r from-slate-300 to-white mb-8" data-aos="fade-right" data-aos-delay="100">{{ title }}<br/><span class="text-slate-50">{{ subtitle }}</span></h1>
             <p class="text-xl text-transparent bg-clip-text bg-gradient-to-t from-slate-400 to-white mb-12" data-aos="fade-right" data-aos-delay="200">{{ description }}</p>
 
             <!-- Buttons -->
@@ -77,6 +77,10 @@ export default {
   },
   props: {
     title:{
+      type: String,
+      required: true
+    },
+    subtitle:{
       type: String,
       required: true
     },

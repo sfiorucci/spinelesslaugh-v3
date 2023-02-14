@@ -8,7 +8,7 @@
     <main class="grow">
 
       <Hero />
-      <Carousel />
+      <Carousel category="all" />
       <Releases />
 
     </main>

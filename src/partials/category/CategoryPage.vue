@@ -9,10 +9,11 @@
 
       <HeroCategory
         :title="category.name"
+        :subtitle="category.byline"
         :description="category.excerpt"
         :imageUrl="buildImagePath(category.imagePath, 'category', category.slug, 'png')"
       />
-      <Carousel />
+      <Carousel :category="category.slug" />
       <Releases :list="list" />
 
     </main>
