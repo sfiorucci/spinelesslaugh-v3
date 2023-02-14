@@ -55,37 +55,37 @@
   ],
   "mixes": [
     {
-      "slug": "bad-aesthetics",
+      "slug": "comedowns",
       "position": 0
     },
     {
-      "slug": "top-100-2022-best-songs",
+      "slug": "mixmag-2010-2019-best-techno",
       "position": 1
     },
     {
-      "slug": "the-sun-numbers-remix",
+      "slug": "sweet-ignorance",
       "position": 2
     },
     {
-      "slug": "mixmag-2010-2019-best-techno",
+      "slug": "exxence",
       "position": 3
     }
   ],
   "mixtapes": [
     {
-      "slug": "bad-aesthetics",
+      "slug": "top-100-2022-best-songs",
       "position": 0
     },
     {
-      "slug": "top-100-2022-best-songs",
+      "slug": "top-90-2021-best-songs",
       "position": 1
     },
     {
-      "slug": "the-sun-numbers-remix",
+      "slug": "top-100-2020-best-songs",
       "position": 2
     },
     {
-      "slug": "mixmag-2010-2019-best-techno",
+      "slug": "top-100-2019-best-songs",
       "position": 3
     }
   ]

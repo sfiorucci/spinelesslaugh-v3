@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from './pages/Home.vue'
 import Tunes from './pages/Tunes.vue'
 import Remixes from './pages/Remixes.vue'
+import Mixes from './pages/Mixes.vue'
+import Mixtapes from './pages/Mixtapes.vue'
 import Subscribe from './pages/Subscribe.vue'
 
 const routerHistory = createWebHistory()
@@ -32,11 +34,11 @@ const router = createRouter({
     },
     {
       path: '/mixes',
-      component: Tunes
+      component: Mixes
     },
     {
       path: '/mixtapes',
-      component: Tunes
+      component: Mixtapes
     }     
   ]
 })

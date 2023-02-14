@@ -46,7 +46,6 @@ import CarouselItem from '../partials/CarouselItem.vue'
 import ReleaseJSON from '../data/releases.json'
 import FeaturedReleaseJSON from '../data/featured_releases.json'
 import getFeatured from '../mixins/helpers'
-import matchCategory from '../mixins/helpers'
  
 // Import Swiper
 import Swiper, { Navigation } from 'swiper'
@@ -76,7 +75,7 @@ export default {
       return this.getFeatured(featured, this.releases)
     }
   },
-  mixins: [ getFeatured, matchCategory ],
+  mixins: [ getFeatured ],
   setup() {
     onMounted(() => {
       const carousel = new Swiper('.carousel', {
