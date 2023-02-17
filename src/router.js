@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import categories from './data/categories.json'
 import releases from './data/releases.json'
-import { createRoutes } from './libraries/helpers'
-import { createReleaseRoutes } from './libraries/helpers'
+import { createRoutes, createReleaseRoutes } from './libraries/helpers'
+// import { createReleaseRoutes } from './libraries/helpers'
 
 const pageModules = import.meta.glob('./pages/*.vue')
 const tunesModules = import.meta.glob('./pages/tunes/*.vue')
 const remixesModules = import.meta.glob('./pages/remixes/*.vue')
-const mixesModules = import.meta.glob('./pages/mixes*.vue')
-const mixtapesModules = import.meta.glob('./pages/mixtapes*.vue')
+const mixesModules = import.meta.glob('./pages/mixes/*.vue')
+const mixtapesModules = import.meta.glob('./pages/mixtapes/*.vue')
 const releaseModules = { ...tunesModules, ...remixesModules, ...mixesModules, ...mixtapesModules }
 
 const homeRoute = [

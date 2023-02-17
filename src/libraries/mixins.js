@@ -28,6 +28,9 @@ export default {
       
       return featuredItems
     },
+    buildReleasePath(item) {
+      return `/${item.category.toLowerCase()}/${item.slug}`
+    },
     buildImagePath(path, ratio, slug, format) {
       return `https://www.spinelesslaugh.com/${path}/${ratio}/${slug}.${format}`
     },

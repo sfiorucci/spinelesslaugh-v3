@@ -1,6 +1,6 @@
 <template>
   <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
-    <router-link :to="release.slug">
+    <router-link :to="buildReleasePath(release)">
       <div>
         <div :class="setCategoryInfo(categories, release).color.bg" class="absolute inset-0 -z-10 rounded-3xl mix-blend-multiply">
           <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, 'bw-fade', release.slug, 'jpg')" width="446" height="200" alt="Carousel 01" />
@@ -21,6 +21,7 @@
 import CategoryJSON from '../data/categories.json'
 import formatDate from '../libraries/mixins'
 import setCategoryInfo from '../libraries/mixins'
+import buildReleasePath from '../libraries/mixins'
 
 export default {
   name: 'CarouselItem',
@@ -30,7 +31,7 @@ export default {
       required: true
     }
   },
-  mixins: [ formatDate, setCategoryInfo ],
+  mixins: [ formatDate, setCategoryInfo, buildReleasePath ],
   computed: {
     categories() {
       return CategoryJSON

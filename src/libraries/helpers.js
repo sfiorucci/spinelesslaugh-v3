@@ -11,7 +11,7 @@ export function createRoutes(items, modules, path) {
     let route = 
       {
         path: `/${path}${item.slug}`,
-        component: modules[`./pages/${item.componentName}.vue`]
+        component: modules[`./pages/${path}${item.componentName}.vue`]
       }
     routes = [ ...routes, route ]
   })
