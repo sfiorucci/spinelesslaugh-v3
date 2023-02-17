@@ -25,9 +25,9 @@
 <script>
 
 import CategoryJSON from '../../data/categories.json'
-import buildImagePath from '../../mixins/helpers'
-import formatDate from '../../mixins/helpers'
-import setCategoryInfo from '../../mixins/helpers'
+import buildImagePath from '../../libraries/mixins'
+import formatDate from '../../libraries/mixins'
+import setCategoryInfo from '../../libraries/mixins'
 
 export default {
   name: 'ReleaseItem',

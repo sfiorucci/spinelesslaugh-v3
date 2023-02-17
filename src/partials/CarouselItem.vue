@@ -19,8 +19,8 @@
 <script>
 
 import CategoryJSON from '../data/categories.json'
-import formatDate from '../mixins/helpers'
-import setCategoryInfo from '../mixins/helpers'
+import formatDate from '../libraries/mixins'
+import setCategoryInfo from '../libraries/mixins'
 
 export default {
   name: 'CarouselItem',

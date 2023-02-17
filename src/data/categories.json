@@ -1,9 +1,9 @@
 [
   {
     "slug": "tunes",
+    "componentName": "Tunes",
     "name": "Tunes",
     "byline": "and good vibes",
-    "url": "/tunes",
     "excerpt":
       "Spineless Laugh's original productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch. Lonely, homemade, self-released pieces of music.",
     "imagePath": "music/tunes/images",
@@ -18,9 +18,9 @@
   },
   {
     "slug": "remixes",
+    "componentName": "Remixes",
     "name": "Remixes",
     "byline": "and mashups",
-    "url": "/remixes",
     "excerpt":
       "All things remixes by Spineless Laugh: pick a song you like and make it yours. Transformative works of creativity to reiterate that all cultural artifacts are open to re-appropriation. Especially music.",
     "imagePath": "music/remixes/images",
@@ -35,9 +35,9 @@
   },
   {
     "slug": "mixes",
+    "componentName": "Mixes",
     "name": "Mixes",
     "byline": "and DJ clubbing",
-    "url": "/mixes",
     "excerpt":
       "All things mixed by Spineless Laugh: the art of warping, blending, fine tuning, and make a bunch of songs a whole, immersive, unbroken listening experience.",
     "imagePath": "music/mixes/images",
@@ -52,9 +52,9 @@
   },
   {
     "slug": "mixtapes",
+    "componentName": "Mixtapes",
     "name": "Mixtapes",
     "byline": "and playlists",
-    "url": "/mixtapes",
     "excerpt":
       "Collections of songs curated by Spineless Laugh: whether it's a Spotify selection or a hand-delivered cassette, there are many ways to tell stories with a carefully picked tracklist.",
     "imagePath": "music/mixtapes/images",

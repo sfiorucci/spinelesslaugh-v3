@@ -6,9 +6,9 @@
 import CategoryPage from '../partials/category/CategoryPage.vue'
 import CategoryJSON from '../data/categories.json'
 import ReleaseJSON from '../data/releases.json'
-import sortByDate from '../mixins/helpers'
-import matchCategory from '../mixins/helpers'
-import filterReleases from '../mixins/helpers'
+import sortByDate from '../libraries/mixins'
+import matchCategory from '../libraries/mixins'
+import filterReleases from '../libraries/mixins'
 
 export default {
   name: 'Mixes',

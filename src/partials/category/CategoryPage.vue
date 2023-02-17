@@ -30,7 +30,7 @@ import HeroCategory from '../../partials/category/Hero.vue'
 import Carousel from '../../partials/Carousel.vue'
 import Releases from '../../partials/category/Releases.vue'
 import Footer from '../../partials/layout/Footer.vue'
-import buildImagePath from '../../mixins/helpers'
+import buildImagePath from '../../libraries/mixins'
 
 export default {
   name: 'Home',

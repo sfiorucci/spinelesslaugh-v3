@@ -21,7 +21,7 @@
 
 <script>
 import Header from '../partials/layout/Header.vue'
-import Hero from '../partials/Hero.vue'
+import Hero from '../partials/home/Hero.vue'
 import Carousel from '../partials/Carousel.vue'
 import Releases from '../partials/home/Releases.vue'
 import Footer from '../partials/layout/Footer.vue'

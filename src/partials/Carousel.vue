@@ -45,7 +45,7 @@ import { onMounted } from 'vue'
 import CarouselItem from '../partials/CarouselItem.vue'
 import ReleaseJSON from '../data/releases.json'
 import FeaturedReleaseJSON from '../data/featured_releases.json'
-import getFeatured from '../mixins/helpers'
+import getFeatured from '../libraries/mixins'
  
 // Import Swiper
 import Swiper, { Navigation } from 'swiper'

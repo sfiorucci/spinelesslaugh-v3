@@ -1,42 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import categories from './data/categories.json'
-// import Home from './pages/Home.vue'
-// import Tunes from './pages/Tunes.vue'
-// import Remixes from './pages/Remixes.vue'
-// import Mixes from './pages/Mixes.vue'
-// import Mixtapes from './pages/Mixtapes.vue'
-// import Subscribe from './pages/Subscribe.vue'
+import releases from './data/releases.json'
+import { createRoutes } from './libraries/helpers'
+import { createReleaseRoutes } from './libraries/helpers'
 
-const modules = import.meta.glob('./pages/*.vue')
-
-for (const path in modules) {
-  modules[path]().then((mod) => {
-    console.log(path, mod)
-  })
-}
+const pageModules = import.meta.glob('./pages/*.vue')
+const tunesModules = import.meta.glob('./pages/tunes/*.vue')
+const remixesModules = import.meta.glob('./pages/remixes/*.vue')
+const mixesModules = import.meta.glob('./pages/mixes*.vue')
+const mixtapesModules = import.meta.glob('./pages/mixtapes*.vue')
+const releaseModules = { ...tunesModules, ...remixesModules, ...mixesModules, ...mixtapesModules }
 
 const homeRoute = [
   {
     path: '/',
-    component: modules['./pages/Home.vue']
+    component: pageModules['./pages/Home.vue']
   }
 ]
 
-console.log(categories)
+const categoryRoutes = createRoutes(categories, pageModules, '')
 
-let categoryRoutes = []
-categories.map(cat => {
-  let categoryRoute = 
-    {
-      path: cat.url,
-      component: modules[`./pages/${cat.name}.vue`]
-    }
-  categoryRoutes = [ ...categoryRoutes, categoryRoute ]
-  console.log(categoryRoutes)
-})
-
-console.log(homeRoute)
-console.log(categoryRoutes)
+const releaseRoutes = createReleaseRoutes(releases, categories, releaseModules)
 
 const routerHistory = createWebHistory()
 
@@ -51,9 +35,7 @@ const router = createRouter({
     }
   },  
   history: routerHistory,
-  routes: homeRoute.concat(categoryRoutes)
+  routes: homeRoute.concat(categoryRoutes, releaseRoutes)
 })
-
-console.log(router)
 
 export default router

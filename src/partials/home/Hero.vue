@@ -44,7 +44,7 @@
             <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-start space-y-6 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="300">
               <Button v-for="category in categories" :key="category.slug"
                 :label="category.name"
-                :url="category.url"
+                :url="`/${category.slug}`"
                 :backgroundColor="category.color.background"
                 :hoverColor="category.color.buttonHover"
                 :arrowColor="category.color.arrow"
@@ -56,7 +56,7 @@
           <!-- Image -->
           <div class="max-w-sm mx-auto md:max-w-none md:absolute md:left-[36rem] md:top-1/2 md:-translate-y-1/2 md:ml-8 lg:ml-20 xl:ml-32">
             <div data-aos="fade-left" data-aos-duration="2000">
-              <img src="../images/dj-silhouette.png" class="hidden md:flex md:max-w-none" width="401" height="601" alt="studio" />
+              <img src="../../images/dj-silhouette.png" class="hidden md:flex md:max-w-none" width="401" height="601" alt="studio" />
             </div>
           </div>
 
@@ -68,8 +68,8 @@
 
 <script>
 
-import CategoryJSON from '../data/categories.json'
-import Button from "../components/HeroButton.vue"
+import CategoryJSON from '../../data/categories.json'
+import Button from "../../components/HeroButton.vue"
 
 export default {
   name: 'Hero',
