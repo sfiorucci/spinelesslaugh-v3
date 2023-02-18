@@ -9,19 +9,36 @@
 
 <script>
 import AOS from 'aos'
-import { useMeta } from 'vue-meta'
 
 export default {
-  setup() {
-    useMeta({
+  metaInfo() {
+    return {
       title: `Spineless Laugh's Music | Beats & Bytes`,
       description: `Audio editor, producer, and sound manipulator. Here you can find all songs, remixes, mixtapes, playlists, and any other music experiment by Spineless Laugh.`,
-      htmlAttrs: { lang: 'en', amp: true },
-      meta: [
-        { charset: 'UTF-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
-      ]
-    })
+      charset: 'UTF-8',
+      robots: { tag: 'meta', content: 'index, follow' },
+      copyright: { tag: 'meta', content: 'Spineless Laugh' },
+      keywords: { tag: 'meta', content: 'music, electro, mixes, remixes, mixtapes, playlists, spineless laugh, producer' },
+      copyright: { tag: 'meta', content: 'Spineless Laugh' },
+      viewport: { tag: 'meta', content: 'width=device-width, initial-scale=1.0' },
+      language: { tag: 'meta', content: 'EN' },
+      author: { tag: 'meta', content: 'Spineless Laugh, spineless@spinelesslaugh.com' },
+      designer: { tag: 'meta', content: 'Spineless Laugh' },
+      url: { tag: 'meta', content: 'https://www.spinelesslaugh.com' },
+      og: {
+        title: `Spineless Laugh's Music | Beats & Bytes`,
+        description: `Audio editor, producer, and sound manipulator. Here you can find all songs, remixes, mixtapes, playlists, and any other music experiment by Spineless Laugh.`,
+        image: './images/home-cover.jpg',
+        type: 'website',
+        url: 'https://www.spinelesslaugh.com'
+      },
+      twitter: {
+        title: `Spineless Laugh's Music | Beats & Bytes`,
+        description: `Audio editor, producer, and sound manipulator. Here you can find all songs, remixes, mixtapes, playlists, and any other music experiment by Spineless Laugh.`,
+        card: 'summary_large_image',
+        site: '@spineless_laugh'
+      }
+    }
   },
   mounted() {
     AOS.init({
