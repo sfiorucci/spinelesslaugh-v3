@@ -35,12 +35,16 @@ export default {
     Carousel,
     Releases,
     Footer,
-  },
-  setup () {
-    useMeta({
-      title: `Spineless Laugh's Music | Beats & Bytes`,
-      htmlAttrs: { lang: 'en', amp: true }
-    })
-  },
+  }
+  // setup () { 
+  //   useMeta({
+  //     meta: [
+  //       { 
+  //         name: 'description',
+  //         content: 'Overrided by Home meta'
+  //       }
+  //     ]
+  //   })
+  // }
 }
 </script>

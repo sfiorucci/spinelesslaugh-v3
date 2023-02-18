@@ -38,7 +38,7 @@
 
             <!-- Copy -->
             <h1 class="h1 font-hkgrotesk text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-white mb-8" data-aos="fade-right" data-aos-delay="100">All things<br/><span class="text-slate-50">Spineless Laugh</span></h1>
-            <p class="text-xl text-transparent bg-clip-text bg-gradient-to-t from-slate-400 to-white mb-12" data-aos="fade-right" data-aos-delay="200">Spineless Laugh is beats & bytes: audio editor, producer, sound manipulator. This is the one and only place for all things SL: songs, remixes, mixtapes, playlists, and any other audio experiment.</p>
+            <p class="text-xl text-transparent bg-clip-text bg-gradient-to-t from-slate-400 to-white mb-12" data-aos="fade-right" data-aos-delay="200">Spineless Laugh is beats & bytes: audio editor, producer, sound manipulator. This is the one and only place for all things SL: songs, remixes, mixtapes, playlists, and any other noisy music experiment.</p>
 
             <!-- Buttons -->
             <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:justify-start space-y-6 sm:space-y-0 sm:space-x-4" data-aos="fade-right" data-aos-delay="300">

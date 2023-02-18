@@ -15,7 +15,12 @@ export default {
   setup () {
     useMeta({
       title: `Spineless Laugh's Music | Beats & Bytes`,
-      htmlAttrs: { lang: 'en', amp: true }
+      description: `Audio editor, producer, and sound manipulator. Here you can find all songs, remixes, mixtapes, playlists, and any other music experiment by Spineless Laugh.`,
+      htmlAttrs: { lang: 'en', amp: true },
+      meta: [
+        { charset: 'UTF-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+      ]
     })
   },
   mounted() {

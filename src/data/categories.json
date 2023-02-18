@@ -7,6 +7,8 @@
     "excerpt":
       "Spineless Laugh's original productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch. Lonely, homemade, self-released pieces of music.",
     "imagePath": "music/tunes/images",
+    "seoTitle": "Spineless Laugh's Music | Original Studio Productions",
+    "seoDescription": "Spineless Laugh's original, self-released studio productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch.",
     "color": {
       "background": "bg-teal-500",
       "buttonHover": "hover:bg-teal-600",
@@ -24,6 +26,8 @@
     "excerpt":
       "All things remixes by Spineless Laugh: pick a song you like and make it yours. Transformative works of creativity to reiterate that all cultural artifacts are open to re-appropriation. Especially music.",
     "imagePath": "music/remixes/images",
+    "seoTitle": "Spineless Laugh's Music | Remixes and Mashups",
+    "seoDescription": "Spineless Laugh' remixes and mashups. Transformative works of creativity to reiterate that all cultural artifacts are open to re-appropriation. Especially music.",
     "color": {
       "background": "bg-sky-500",
       "buttonHover": "hover:bg-sky-600",
@@ -39,8 +43,10 @@
     "name": "Mixes",
     "byline": "and DJ clubbing",
     "excerpt":
-      "All things mixed by Spineless Laugh: the art of warping, blending, fine tuning, and make a bunch of songs a whole, immersive, unbroken listening experience.",
+      "All things mixed by Spineless Laugh: the art of warping, blending, fine-tuning, and making a bunch of songs a whole, immersive, unbroken listening experience.",
     "imagePath": "music/mixes/images",
+    "seoTitle": "Spineless Laugh's Music | Studio Mixes and Live DJ Clubbing",
+    "seoDescription": "Spineless Laugh's studio mixes: the art of warping, blending, fine-tuning, and making a bunch of songs a whole, immersive, unbroken listening experience.",
     "color": {
       "background": "bg-violet-500",
       "buttonHover": "hover:bg-violet-600",
@@ -58,7 +64,9 @@
     "excerpt":
       "Collections of songs curated by Spineless Laugh: whether it's a Spotify selection or a hand-delivered cassette, there are many ways to tell stories with a carefully picked tracklist.",
     "imagePath": "music/mixtapes/images",
-      "color": {
+    "seoTitle": "Spineless Laugh's Music | Mixtapes and Playlists",
+    "seoDescription": "Collections of songs curated by Spineless Laugh: whether it's a Spotify selection or a hand-delivered cassette, just hit PLAY and enjoy!",
+    "color": {
       "background": "bg-pink-500",
       "buttonHover": "hover:bg-pink-600",
       "text": "text-pink-500",

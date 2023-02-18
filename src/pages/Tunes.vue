@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      categoryName: 'Tunes'
+      categoryName: 'Tunes',
     }
   },
   computed: {
@@ -35,11 +35,17 @@ export default {
       return this.filterReleases(this.categoryName, this.releases)
     }
   },
+  methods: {
+    ciao() {
+      return 'Ciao!'
+    }
+  },
   setup () {
     useMeta({
       title: `Spineless Laugh's Music | Original Studio Productions`,
-      htmlAttrs: { lang: 'en', amp: true }
+      description: `Spineless Laugh's original, self-released studio productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch.`
     })
+    console.log(ciao)
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]
 }

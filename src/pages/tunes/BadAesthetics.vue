@@ -140,11 +140,12 @@
 <script>
 import { ref } from 'vue'
 
-import Header from '../partials/Header.vue'
-import AudioPlayer from '../../../partials/AudioPlayer.vue'
-import Carousel from '../../../partials/Carousel.vue'
-import Cta from '../../../partials/Cta.vue'
-import Footer from '../../../partials/layout/Footer.vue'
+import Header from '../../partials/layout/Header.vue'
+import AudioPlayer from '../../partials/AudioPlayer.vue'
+import Carousel from '../../partials/Carousel.vue'
+import Cta from '../../partials/Cta.vue'
+import Footer from '../../partials/layout/Footer.vue'
+import { useMeta } from 'vue-meta'
 
 export default {
   name: 'Podcast',
@@ -156,6 +157,9 @@ export default {
     Footer,
   },
   setup() {
+    useMeta({
+      title: `Spineless Laugh's Tunes | Bad Aesthetics`
+    })
     const audio = ref(null)
 
     const goToTime = (time) => {

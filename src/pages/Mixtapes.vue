@@ -37,8 +37,7 @@ export default {
   },
   setup () {
     useMeta({
-      title: `Spineless Laugh's Music | Mixtapes and Playlists`,
-      htmlAttrs: { lang: 'en', amp: true }
+      title: `Spineless Laugh's Music | Mixtapes and Playlists`
     })
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]

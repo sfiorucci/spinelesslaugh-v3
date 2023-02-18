@@ -37,8 +37,7 @@ export default {
   },
   setup () {
     useMeta({
-      title: `Spineless Laugh's Music | Studio Mixes and Live DJ Clubbing`,
-      htmlAttrs: { lang: 'en', amp: true }
+      title: `Spineless Laugh's Music | Studio Mixes and Live DJ Clubbing`
     })
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]
