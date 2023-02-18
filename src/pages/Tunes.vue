@@ -50,6 +50,7 @@ export default {
       twitter: {
         title: this.currentCategory.seoTitle,
         description: this.currentCategory.seoDescription,
+        image: this.buildImagePath(this.currentCategory.imagePath, 'cover', this.currentCategory.slug, 'jpg'),
         card: 'summary_large_image',
         site: '@spineless_laugh'
       }

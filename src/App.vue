@@ -35,6 +35,7 @@ export default {
       twitter: {
         title: `Spineless Laugh's Music | Beats & Bytes`,
         description: `Audio editor, producer, and sound manipulator. Here you can find all songs, remixes, mixtapes, playlists, and any other music experiment by Spineless Laugh.`,
+        image: './images/home-cover.jpg',
         card: 'summary_large_image',
         site: '@spineless_laugh'
       }
