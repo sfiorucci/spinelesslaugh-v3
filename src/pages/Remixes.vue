@@ -9,6 +9,7 @@ import ReleaseJSON from '../data/releases.json'
 import sortByDate from '../libraries/mixins'
 import matchCategory from '../libraries/mixins'
 import filterReleases from '../libraries/mixins'
+import { useMeta } from 'vue-meta'
 
 export default {
   name: 'Remixes',
@@ -33,6 +34,12 @@ export default {
     filteredList() {
       return this.filterReleases(this.categoryName, this.releases)
     }
+  },
+  setup () {
+    useMeta({
+      title: `Spineless Laugh's Music | Remixes and Mashups`,
+      htmlAttrs: { lang: 'en', amp: true }
+    })
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]
 }

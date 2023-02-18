@@ -1,6 +1,6 @@
 {
-  "name": "podcast-vue",
-  "version": "0.0.0",
+  "name": "spinelesslaugh-vue",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,6 +12,7 @@
     "lodash": "^4.17.21",
     "swiper": "^8.3.2",
     "vue": "^3.2.25",
+    "vue-meta": "^3.0.0-alpha.7",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {

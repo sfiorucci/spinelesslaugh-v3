@@ -25,6 +25,7 @@ import Hero from '../partials/home/Hero.vue'
 import Carousel from '../partials/Carousel.vue'
 import Releases from '../partials/home/Releases.vue'
 import Footer from '../partials/layout/Footer.vue'
+import { useMeta } from 'vue-meta'
 
 export default {
   name: 'Home',
@@ -34,6 +35,12 @@ export default {
     Carousel,
     Releases,
     Footer,
-  }
+  },
+  setup () {
+    useMeta({
+      title: `Spineless Laugh's Music | Beats & Bytes`,
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
 }
 </script>
