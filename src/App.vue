@@ -12,7 +12,7 @@ import AOS from 'aos'
 import { useMeta } from 'vue-meta'
 
 export default {
-  setup () {
+  setup() {
     useMeta({
       title: `Spineless Laugh's Music | Beats & Bytes`,
       description: `Audio editor, producer, and sound manipulator. Here you can find all songs, remixes, mixtapes, playlists, and any other music experiment by Spineless Laugh.`,

@@ -25,7 +25,6 @@ import Hero from '../partials/home/Hero.vue'
 import Carousel from '../partials/Carousel.vue'
 import Releases from '../partials/home/Releases.vue'
 import Footer from '../partials/layout/Footer.vue'
-import { useMeta } from 'vue-meta'
 
 export default {
   name: 'Home',
@@ -36,15 +35,5 @@ export default {
     Releases,
     Footer,
   }
-  // setup () { 
-  //   useMeta({
-  //     meta: [
-  //       { 
-  //         name: 'description',
-  //         content: 'Overrided by Home meta'
-  //       }
-  //     ]
-  //   })
-  // }
 }
 </script>

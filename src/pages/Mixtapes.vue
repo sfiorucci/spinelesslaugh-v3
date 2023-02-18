@@ -9,7 +9,6 @@ import ReleaseJSON from '../data/releases.json'
 import sortByDate from '../libraries/mixins'
 import matchCategory from '../libraries/mixins'
 import filterReleases from '../libraries/mixins'
-import { useMeta } from 'vue-router'
 
 export default {
   name: 'Mixtapes',
@@ -35,10 +34,11 @@ export default {
       return this.filterReleases(this.categoryName, this.releases)
     }
   },
-  setup () {
-    useMeta({
-      title: `Spineless Laugh's Music | Mixtapes and Playlists`
-    })
+  metaInfo() {
+    return {
+      title: this.currentCategory.seoTitle,
+      description: this.currentCategory.seoDescription
+    }
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]
 }

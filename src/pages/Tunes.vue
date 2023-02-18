@@ -9,7 +9,6 @@ import ReleaseJSON from '../data/releases.json'
 import sortByDate from '../libraries/mixins'
 import matchCategory from '../libraries/mixins'
 import filterReleases from '../libraries/mixins'
-import { useMeta } from 'vue-meta'
 
 export default {
   name: 'Tunes',
@@ -35,17 +34,11 @@ export default {
       return this.filterReleases(this.categoryName, this.releases)
     }
   },
-  methods: {
-    ciao() {
-      return 'Ciao!'
+  metaInfo() {
+    return {
+      title: this.currentCategory.seoTitle,
+      description: this.currentCategory.seoDescription
     }
-  },
-  setup () {
-    useMeta({
-      title: `Spineless Laugh's Music | Original Studio Productions`,
-      description: `Spineless Laugh's original, self-released studio productions: glitchy electronic and IDM with a sad, melodic, paranoid-androidish touch.`
-    })
-    console.log(ciao)
   },
   mixins: [ sortByDate, matchCategory, filterReleases ]
 }
