@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import categories from './data/categories.json'
 import releases from './data/releases.json'
 import { createRoutes, createReleaseRoutes } from './libraries/helpers'
-// import { createReleaseRoutes } from './libraries/helpers'
 
 const pageModules = import.meta.glob('./pages/*.vue')
 const tunesModules = import.meta.glob('./pages/tunes/*.vue')

@@ -1,8 +1,21 @@
 <template>
-  <CategoryPage :category="currentCategory" :list="filteredList"/>
+  <div className="flex flex-col min-h-screen overflow-hidden">
+
+    <!-- Site header -->
+    <Header />
+
+    <!-- Page content -->
+    <CategoryPage :category="currentCategory" :list="filteredList"/>
+    
+    <!-- Site footer -->
+    <Footer />    
+
+  </div>
 </template>
 
 <script>
+import Header from '../partials/layout/Header.vue'
+import Footer from '../partials/layout/Footer.vue'
 import CategoryPage from '../partials/category/CategoryPage.vue'
 import CategoryJSON from '../data/categories.json'
 import ReleaseJSON from '../data/releases.json'
@@ -13,7 +26,9 @@ import filterReleases from '../libraries/mixins'
 export default {
   name: 'Mixtapes',
   components: {
+    Header,
     CategoryPage,
+    Footer
   },
   data() {
     return {

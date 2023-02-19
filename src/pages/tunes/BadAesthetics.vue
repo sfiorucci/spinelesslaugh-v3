@@ -10,23 +10,23 @@
       <AudioPlayer ref="audio" />
 
       <!-- Content -->
-      <section>
+      <!-- <section>
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="pb-12 md:pb-20">
       
-            <div class="md:flex md:justify-between md:space-x-14">
+            <div class="md:flex md:justify-between md:space-x-14"> -->
       
               <!-- Main content -->
-              <div class="md:grow space-y-8 mb-12 md:mb-0">
+              <!-- <div class="md:grow space-y-8 mb-12 md:mb-0"> -->
                 <!-- Notes -->
-                <div>
+                <!-- <div>
                   <h2 class="text-3xl md:text-4xl font-hkgrotesk font-extrabold mb-4">Notes</h2>
                   <p class="text-slate-500">
                     In this episode, It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the with the release of letraset sheets containing passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                   </p>
-                </div>
+                </div> -->
                 <!-- Topics -->
-                <div>
+                <!-- <div>
                   <h3 class="h3 font-hkgrotesk mb-4">Topics</h3>
                   <ul>
                     <li>
@@ -56,9 +56,9 @@
                       </button>
                     </li>
                   </ul>
-                </div>
+                </div> -->
                 <!-- Contributors -->
-                <div>
+                <!-- <div>
                   <h3 class="h3 font-hkgrotesk mb-4">Contributors</h3>
                   <div class="text-slate-500 space-y-3">
                     <p>
@@ -71,15 +71,15 @@
                       <span class="text-slate-400">—</span> <a class="font-medium text-slate-800 underline hover:no-underline" href="#0">Mary James</a> lives in London, UK. He's been involved in the podcasting world since 2013, and has been building software since 2002.
                     </p>
                   </div>
-                </div>
+                </div> -->
                 <!-- Notes -->
-                <div class="text-slate-500 italic">
+                <!-- <div class="text-slate-500 italic">
                   If you liked this episode, popularised in the with the release of letraset sheets containing passages, and more recently with desktop <a class="font-medium text-slate-800 hover:underline" href="#0">@PublishingSoftware</a>.
                 </div>
-              </div>
+              </div> -->
       
               <!-- Sidebar -->
-              <aside class="md:w-72 md:shrink-0">
+              <!-- <aside class="md:w-72 md:shrink-0">
                 <div class="relative bg-slate-100 rounded-3xl p-6">
                   <div class="absolute top-0 right-0 -mt-8 mr-14 pointer-events-none" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50">
@@ -123,11 +123,11 @@
       
           </div>
         </div>
-      </section>
+      </section> -->
       
-      <Carousel />
+      <!-- <Carousel />
       <div className="pb-12 md:pb-20" aria-hidden="true"></div>
-      <Cta />
+      <Cta /> -->
 
     </main>
     

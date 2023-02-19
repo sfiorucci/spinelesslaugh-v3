@@ -1,8 +1,4 @@
 <template>
-  <div className="flex flex-col min-h-screen overflow-hidden">
-
-    <!-- Site header -->
-    <Header />
 
     <!-- Page content -->
     <main class="grow">
@@ -18,28 +14,20 @@
 
     </main>
     
-    <!-- Site footer -->
-    <Footer />    
-
-  </div>
 </template>
 
 <script>
-import Header from '../../partials/layout/Header.vue'
 import HeroCategory from '../../partials/category/Hero.vue'
 import Carousel from '../../partials/Carousel.vue'
 import Releases from '../../partials/category/Releases.vue'
-import Footer from '../../partials/layout/Footer.vue'
 import buildImagePath from '../../libraries/mixins'
 
 export default {
   name: 'Home',
   components: {
-    Header,
     HeroCategory,
     Carousel,
-    Releases,
-    Footer,
+    Releases
   },
   props: {
     category: {
