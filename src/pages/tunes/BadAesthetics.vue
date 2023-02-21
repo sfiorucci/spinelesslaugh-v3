@@ -5,9 +5,10 @@
     <Header />
 
     <!-- Page content -->
-    <main class="grow">
+    <TunePage :release="getCurrentRelease" /> 
+    <!-- <main class="grow">
 
-      <AudioPlayer ref="audio" />
+      <AudioPlayer ref="audio" /> -->
 
       <!-- Content -->
       <!-- <section>
@@ -125,11 +126,11 @@
         </div>
       </section> -->
       
-      <!-- <Carousel />
-      <div className="pb-12 md:pb-20" aria-hidden="true"></div>
+      <!-- <Carousel /> -->
+      <!-- <div className="pb-12 md:pb-20" aria-hidden="true"></div>
       <Cta /> -->
 
-    </main>
+    <!-- </main> -->
     
     <!-- Site footer -->
     <Footer />    
@@ -138,38 +139,47 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-
+// import { ref } from 'vue'
 import Header from '../../partials/layout/Header.vue'
-import AudioPlayer from '../../partials/AudioPlayer.vue'
-import Carousel from '../../partials/Carousel.vue'
-import Cta from '../../partials/Cta.vue'
+import TunePage from '../../partials/release/TunePage.vue'
+// import AudioPlayer from '../../partials/AudioPlayer.vue'
+// import Carousel from '../../partials/Carousel.vue'
+// import Cta from '../../partials/Cta.vue'
 import Footer from '../../partials/layout/Footer.vue'
-import { useMeta } from 'vue-meta'
+import releases from '../../data/releases.json'
+import matchItemBySlug from '../../libraries/mixins'
 
 export default {
   name: 'Podcast',
   components: {
     Header,
-    AudioPlayer,
-    Carousel,
-    Cta,
+    TunePage,
+    // AudioPlayer,
+    // Carousel,
+    // Cta,
     Footer,
   },
-  setup() {
-    useMeta({
-      title: `Spineless Laugh's Tunes | Bad Aesthetics`
-    })
-    const audio = ref(null)
-
-    const goToTime = (time) => {
-      audio.value.goToTime(time)
+  computed: {
+    getCurrentSlug() {
+      const slicedPath = this.$route.path.match(/[^\/]+/g)
+      return slicedPath[slicedPath.length - 1]
+    },
+    getCurrentRelease() {
+      return this.matchItemBySlug(releases, this.getCurrentSlug)
     }
+  },
+  mixins: [ matchItemBySlug ]
+  // setup() {
+  //   const audio = ref(null)
 
-    return {
-      audio,
-      goToTime,
-    }
-  }
+  //   const goToTime = (time) => {
+  //     audio.value.goToTime(time)
+  //   }
+
+  //   return {
+  //     audio,
+  //     goToTime,
+  //   }
+  // }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="pt-0 pb-0 md:pt-20 md:pb-20">
+      <div class="pt-0 pb-0 md:pt-20 md:pb-24">
 
         <!-- Content -->
         <div class="relative pb-0 max-w-xl mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">

@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="pb-12 pt-16 md:pb-20 md:pt-40">
+      <div class="pb-12 pt-16 md:pb-20 md:pt-20">
         <div class="relative">
   
           <!-- Background -->
@@ -123,6 +123,12 @@ import AudioFile from '../audio/audio.mp3'
 
 export default {
   name: 'AudioPlayer',
+  props: {
+    release: {
+      type: Object,
+      required: true
+    }
+  },
   setup(props, context) {
     const audio = ref(null)
     const slider = ref(null)

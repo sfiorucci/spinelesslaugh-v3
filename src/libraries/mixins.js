@@ -16,6 +16,9 @@ export default {
     matchCategory(categories, key) {
       return _.find(categories, [ 'name', key ])
     },
+    matchItemBySlug(items, key) {
+      return _.find(items, [ 'slug', key ])
+    },
     filterReleases(key, items) {
       return _.filter(items, { 'category': key })
     },
