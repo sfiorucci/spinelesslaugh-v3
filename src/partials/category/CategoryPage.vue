@@ -23,7 +23,7 @@ import Releases from '../../partials/category/Releases.vue'
 import buildImagePath from '../../libraries/mixins'
 
 export default {
-  name: 'Home',
+  name: 'CategoryPage',
   components: {
     HeroCategory,
     Carousel,

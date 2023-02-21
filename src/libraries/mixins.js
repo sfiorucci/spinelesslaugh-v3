@@ -37,6 +37,9 @@ export default {
     buildImagePath(path, ratio, slug, format) {
       return `https://www.spinelesslaugh.com/${path}/${ratio}/${slug}.${format}`
     },
+    buildAudioPath(path, slug, format) {
+      return `https://www.spinelesslaugh.com/${path}/${slug}.${format}`
+    },
     setArchiveTitle(key, items) {
       let title = {
         'text': '',
@@ -72,7 +75,7 @@ export default {
           color: {
             bg: 'bg-slate-500',
             text: 'text-slate-500',
-            hover: 'text-slate-500',
+            hover: 'text-slate-600',
             hex: '#64748b'
           },
           url: '/'

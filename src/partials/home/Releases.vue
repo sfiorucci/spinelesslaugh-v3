@@ -41,7 +41,7 @@ import sortByDate from '../../libraries/mixins'
 import setArchiveTitle from '../../libraries/mixins'
 
 export default {
-  name: 'Podcasts',
+  name: 'Releases',
   components: {
     ReleaseItem,
     Filter,

@@ -5,18 +5,22 @@
         <div class="relative">
   
           <!-- Background -->
-          <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -mx-20 -z-10 overflow-hidden" aria-hidden="true">
+          <!-- <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -mx-20 -z-10 overflow-hidden" aria-hidden="true">
             <img class="w-full h-full object-cover rounded-3xl" src="../images/podcast-single.png" width="1270" height="408" alt="Podcast image">
+          </div> -->
+
+          <div :class="category.color.background" class="absolute inset-0 rounded-3xl -mx-20 -z-10 overflow-hidden mix-blend-multiply" aria-hidden="true">
+            <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, 'bw-fade/big', release.slug, 'jpg')" width="1270" height="408" alt="Release image" />
           </div>
   
           <!-- Content -->
           <div class="py-12 md:py-20 -mx-20 px-20">
             <div class="md:flex justify-between items-center text-center md:text-left">
               <!-- Left content -->
-              <div class="max-w-3xl">
+              <div class="max-w-3xl w-full">
                 <!-- Copy -->
-                <h1 class="h2 font-hkgrotesk text-slate-100 mb-4">Super Excited (aka The Saturday Edition)</h1>
-                <div class="font-hkgrotesk text-white font-medium opacity-80 mb-8">Indie Stories · Jan 24 · Episode 234</div>
+                <h1 class="h2 font-hkgrotesk text-slate-100 mb-4">{{ release.title }}</h1>
+                <div class="font-hkgrotesk text-white font-medium opacity-80 mb-8"><router-link class="hover:underline" :to="`/${category.slug}`">{{ release.category }}</router-link> · {{ formatDate(release.date) }}</div>
 
                 <!-- Player -->
                 <div class="relative px-4 py-5" aria-label="Audio Player" role="region">
@@ -102,7 +106,7 @@
 
                   </div>
 
-                  <audio id="audiofile" :src="AudioFile" ref="audio" @loadedmetadata="loadedMetadata" @timeupdate="timeUpdate" @ended="ended"></audio>
+                  <audio id="audiofile" :src="audioFile" ref="audio" @loadedmetadata="loadedMetadata" @timeupdate="timeUpdate" @ended="ended"></audio>
 
                 </div>
 
@@ -119,7 +123,8 @@
 <script>
 import { ref, reactive, onMounted, onUnmounted } from 'vue'
 
-import AudioFile from '../audio/audio.mp3'
+import formatDate from '../libraries/mixins'
+import buildAudioPath from '../libraries/mixins'
 
 export default {
   name: 'AudioPlayer',
@@ -127,8 +132,18 @@ export default {
     release: {
       type: Object,
       required: true
+    },
+    category: {
+      type: Object,
+      required: true
     }
   },
+  computed: {
+    audioFile() {
+      return this.buildAudioPath(this.release.path.audio, this.release.slug, 'mp3')
+    }
+  },
+  mixins: [ formatDate, buildAudioPath ],
   setup(props, context) {
     const audio = ref(null)
     const slider = ref(null)
@@ -263,7 +278,7 @@ export default {
     context.expose({ goToTime })
 
     return {
-      AudioFile,
+      // AudioFile,
       audio,
       slider,
       playing,

@@ -22,7 +22,7 @@ import ReleaseItem from '../../partials/home/ReleaseItem.vue'
 import Filter from "../../components/FilterButton.vue"
 
 export default {
-  name: 'Podcasts',
+  name: 'Releases',
   components: {
     ReleaseItem,
     Filter,

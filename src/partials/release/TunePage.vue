@@ -3,7 +3,7 @@
     <!-- Page content -->
     <main class="grow">
 
-      <AudioPlayer ref="audio" />
+      <AudioPlayer ref="audio" :release="release" :category="getReleaseCategory" />
 
       <!-- <HeroCategory
         :title="category.name"
@@ -11,7 +11,7 @@
         :description="category.excerpt"
         :imageUrl="buildImagePath(category.imagePath, 'category', category.slug, 'png')"
       /> -->
-      <Carousel :category="getReleaseCategory.slug" />
+      <Carousel class="mb-20" :category="getReleaseCategory.slug" />
 
     </main>
     
@@ -26,7 +26,7 @@ import buildImagePath from '../../libraries/mixins'
 import matchCategory from '../../libraries/mixins'
 
 export default {
-  name: 'Home',
+  name: 'TunesPage',
   components: {
     AudioPlayer,
     Carousel

@@ -2,8 +2,8 @@
   <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
     <router-link :to="buildReleasePath(release)">
       <div>
-        <div :class="setCategoryInfo(categories, release).color.bg" class="absolute inset-0 -z-10 rounded-3xl mix-blend-multiply">
-          <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, 'bw-fade', release.slug, 'jpg')" width="446" height="200" alt="Carousel 01" />
+        <div :class="matchCategory(categories, release.category).color.background" class="absolute inset-0 -z-10 rounded-3xl mix-blend-multiply">
+          <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, 'bw-fade/small', release.slug, 'jpg')" width="446" height="200" alt="Carousel 01" />
         </div>
         <div class="p-5 pb-14">
           <div class="font-hkgrotesk font-extrabold text-white text-xl leading-tight mb-1">{{ release.title }}</div>
@@ -20,7 +20,7 @@
 
 import CategoryJSON from '../data/categories.json'
 import formatDate from '../libraries/mixins'
-import setCategoryInfo from '../libraries/mixins'
+import matchCategory from '../libraries/mixins'
 import buildReleasePath from '../libraries/mixins'
 
 export default {
@@ -31,11 +31,11 @@ export default {
       required: true
     }
   },
-  mixins: [ formatDate, setCategoryInfo, buildReleasePath ],
+  mixins: [ formatDate, matchCategory, buildReleasePath ],
   computed: {
     categories() {
       return CategoryJSON
-    },
+    }
   }
 }
 
