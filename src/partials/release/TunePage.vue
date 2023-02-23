@@ -10,7 +10,7 @@
         <slot name="samples"></slot>
       </div>
 
-      <Carousel class="mb-20" :category="getReleaseCategory.slug" />
+      <Carousel class="my-12 md:my-20" :category="getReleaseCategory.slug" />
 
     </main>
     

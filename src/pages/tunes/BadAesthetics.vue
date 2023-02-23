@@ -10,9 +10,13 @@
         <div class="text-xl">A hot cup full of dubstep, lust and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis on how shouldn't be so hard to have a nice day, and how actually is. Finally.</div>
       </template>
       <template v-slot:samples>
-        <div class="border-2 border-teal-500 rounded-2xl p-8 my-12">
-          <h3 class="h3 font-hkgrotesk mb-4">Samples</h3>
-          <p class="text-lg">lorem ipsum</p>
+        <div :class="getCurrentCategory.color.border" class="max-w-2xl mx-auto border-2 rounded-3xl px-10 py-8 mt-12">
+          <div class="flex justify-between">
+            <h3 class="text-2xl md:text-3xl font-extrabold font-hkgrotesk mb-6">Samples</h3>
+            <i class="ph-music-notes-plus-fill ph-2x"></i>
+          </div>
+          <p class="text-lg pb-4 text-slate-500"><span class="text-slate-300 pr-2">—</span>Drum sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://soundcloud.com/samuraimusicgroup/asc-glass-walls-out-of-sync">Glass Walls</a> by ASC, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://asc77.bandcamp.com/album/out-of-sync">Out of Sync</a>, published by Samurai Red Seal Records © 2012.</p>
+          <p class="text-lg pb-2 text-slate-500"><span class="text-slate-300 pr-2">—</span>Synth sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/track/nebelweg">Nebelweg</a> by Dive, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/album/no-soul-2">No Soul</a>, published by Waking Ghosts Records © 2012.</p>
         </div>
       </template>
     </TunePage>  
@@ -178,6 +182,9 @@ export default {
     },
     getCurrentRelease() {
       return this.matchItemBySlug(releases, this.getCurrentSlug)
+    },
+    getCurrentCategory() {
+      return this.matchCategory(categories, this.getCurrentRelease.category)
     }
   },
   metaInfo() {
@@ -188,14 +195,14 @@ export default {
       og: {
         title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
         description: this.getCurrentRelease.seoDescription,
-        image: this.buildImagePath(this.matchCategory(categories, this.getCurrentRelease.category).imagePath, 'cover', this.getCurrentSlug, 'jpg'),
+        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg'),
         type: 'website',
         url: `https://www.spinelesslaugh.com/${this.$route.path}`
       },
       twitter: {
         title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
         description: this.getCurrentRelease.seoDescription,
-        image: this.buildImagePath(this.matchCategory(categories, this.getCurrentRelease.category).imagePath, 'cover', this.getCurrentSlug, 'jpg'),
+        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg'),
         card: 'summary_large_image',
         site: '@spineless_laugh'
       }

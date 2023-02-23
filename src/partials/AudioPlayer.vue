@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="pb-12 pt-16 md:pb-20 md:pt-20">
+      <div class="pb-12 md:pb-20 md:pt-20">
         <div class="relative">
   
           <!-- Background -->
