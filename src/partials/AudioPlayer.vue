@@ -5,10 +5,6 @@
         <div class="relative">
   
           <!-- Background -->
-          <!-- <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl -mx-20 -z-10 overflow-hidden" aria-hidden="true">
-            <img class="w-full h-full object-cover rounded-3xl" src="../images/podcast-single.png" width="1270" height="408" alt="Podcast image">
-          </div> -->
-
           <div :class="category.color.background" class="absolute inset-0 rounded-3xl -mx-20 -z-10 overflow-hidden mix-blend-multiply" aria-hidden="true">
             <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, 'bw-fade/big', release.slug, 'jpg')" width="1270" height="408" alt="Release image" />
           </div>

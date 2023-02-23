@@ -5,12 +5,11 @@
 
       <AudioPlayer ref="audio" :release="release" :category="getReleaseCategory" />
 
-      <!-- <HeroCategory
-        :title="category.name"
-        :subtitle="category.byline"
-        :description="category.excerpt"
-        :imageUrl="buildImagePath(category.imagePath, 'category', category.slug, 'png')"
-      /> -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <slot name="description"></slot>  
+        <slot name="samples"></slot>
+      </div>
+
       <Carousel class="mb-20" :category="getReleaseCategory.slug" />
 
     </main>

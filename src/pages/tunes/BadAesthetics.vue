@@ -5,7 +5,17 @@
     <Header />
 
     <!-- Page content -->
-    <TunePage :release="getCurrentRelease" /> 
+    <TunePage :release="getCurrentRelease"> 
+      <template v-slot:description>
+        <div class="text-xl">A hot cup full of dubstep, lust and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis on how shouldn't be so hard to have a nice day, and how actually is. Finally.</div>
+      </template>
+      <template v-slot:samples>
+        <div class="border-2 border-teal-500 rounded-2xl p-8 my-12">
+          <h3 class="h3 font-hkgrotesk mb-4">Samples</h3>
+          <p class="text-lg">lorem ipsum</p>
+        </div>
+      </template>
+    </TunePage>  
     <!-- <main class="grow">
 
       <AudioPlayer ref="audio" /> -->
@@ -147,7 +157,9 @@ import TunePage from '../../partials/release/TunePage.vue'
 // import Cta from '../../partials/Cta.vue'
 import Footer from '../../partials/layout/Footer.vue'
 import releases from '../../data/releases.json'
+import categories from '../../data/categories.json'
 import matchItemBySlug from '../../libraries/mixins'
+import matchCategory from '../../libraries/mixins'
 
 export default {
   name: 'Podcast',
@@ -168,7 +180,28 @@ export default {
       return this.matchItemBySlug(releases, this.getCurrentSlug)
     }
   },
-  mixins: [ matchItemBySlug ]
+  metaInfo() {
+    return {
+      title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
+      description: this.getCurrentRelease.seoDescription,
+      url: { tag: 'meta', content: `https://www.spinelesslaugh.com/${this.$route.path}` },
+      og: {
+        title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
+        description: this.getCurrentRelease.seoDescription,
+        image: this.buildImagePath(this.matchCategory(categories, this.getCurrentRelease.category).imagePath, 'cover', this.getCurrentSlug, 'jpg'),
+        type: 'website',
+        url: `https://www.spinelesslaugh.com/${this.$route.path}`
+      },
+      twitter: {
+        title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
+        description: this.getCurrentRelease.seoDescription,
+        image: this.buildImagePath(this.matchCategory(categories, this.getCurrentRelease.category).imagePath, 'cover', this.getCurrentSlug, 'jpg'),
+        card: 'summary_large_image',
+        site: '@spineless_laugh'
+      }
+    }
+  },
+  mixins: [ matchItemBySlug, matchCategory ]
   // setup() {
   //   const audio = ref(null)
 
