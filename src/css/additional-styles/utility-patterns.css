@@ -28,11 +28,11 @@
 /* Logo */
 
 #glyph:hover + #logotype {
-    @apply transition duration-500 ease-in-out text-slate-500;
+    @apply transition-all duration-700 ease-in-out delay-150 tracking-wider;
 }
 
 #logo:hover #glyph {
-    @apply transition duration-500 delay-150 ease-in-out rotate-180;
+    @apply transition duration-500 delay-100 ease-in-out rotate-180;
 }
 
 /* Buttons */

@@ -10,14 +10,10 @@
         <div class="text-xl">A hot cup full of dubstep, lust and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis on how shouldn't be so hard to have a nice day, and how actually is. Finally.</div>
       </template>
       <template v-slot:samples>
-        <div :class="getCurrentCategory.color.border" class="max-w-2xl mx-auto border-2 rounded-3xl px-10 py-8 mt-12">
-          <div class="flex justify-between">
-            <h3 class="text-2xl md:text-3xl font-extrabold font-hkgrotesk mb-6">Samples</h3>
-            <i class="ph-music-notes-plus-fill ph-2x"></i>
-          </div>
+        <InfoBox title="Samples" icon="ph-music-notes-plus-fill ph-2x" :borderColor="getCurrentCategory.color.border">
           <p class="text-lg pb-4 text-slate-500"><span class="text-slate-300 pr-2">—</span>Drum sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://soundcloud.com/samuraimusicgroup/asc-glass-walls-out-of-sync">Glass Walls</a> by ASC, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://asc77.bandcamp.com/album/out-of-sync">Out of Sync</a>, published by Samurai Red Seal Records © 2012.</p>
           <p class="text-lg pb-2 text-slate-500"><span class="text-slate-300 pr-2">—</span>Synth sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/track/nebelweg">Nebelweg</a> by Dive, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/album/no-soul-2">No Soul</a>, published by Waking Ghosts Records © 2012.</p>
-        </div>
+        </InfoBox>
       </template>
     </TunePage>  
     <!-- <main class="grow">
@@ -159,6 +155,7 @@ import TunePage from '../../partials/release/TunePage.vue'
 // import AudioPlayer from '../../partials/AudioPlayer.vue'
 // import Carousel from '../../partials/Carousel.vue'
 // import Cta from '../../partials/Cta.vue'
+import InfoBox from '../../components/InfoBox.vue'
 import Footer from '../../partials/layout/Footer.vue'
 import releases from '../../data/releases.json'
 import categories from '../../data/categories.json'
@@ -170,6 +167,7 @@ export default {
   components: {
     Header,
     TunePage,
+    InfoBox,
     // AudioPlayer,
     // Carousel,
     // Cta,
@@ -202,9 +200,7 @@ export default {
       twitter: {
         title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
         description: this.getCurrentRelease.seoDescription,
-        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg'),
-        card: 'summary_large_image',
-        site: '@spineless_laugh'
+        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg')
       }
     }
   },

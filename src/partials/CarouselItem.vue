@@ -1,6 +1,6 @@
 <template>
   <div class="swiper-slide h-auto flex flex-col max-w-[446px] group">
-    <router-link :to="buildReleasePath(release)">
+    <router-link :to="buildReleasePath(release)" class="hover:translate-y-2 transition duration-500 ease-in-out">
       <div>
         <div :class="matchCategory(categories, release.category).color.background" class="absolute inset-0 -z-10 rounded-3xl mix-blend-multiply">
           <img class="w-full h-full object-cover rounded-3xl mix-blend-multiply opacity-80" :src="buildImagePath(release.path.image, 'bw-fade/small', release.slug, 'jpg')" width="446" height="200" alt="Carousel 01" />
