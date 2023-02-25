@@ -5,26 +5,40 @@
     <Header />
 
     <!-- Page content -->
-    <TunePage :release="getCurrentRelease"> 
-      <template v-slot:description>
-        <div class="text-xl">Have you ever had the experience of losing reference points through blurred memories and the now undefined shape of what you used to know? A trancestep dubtempo filled with tremolo synths, numbed beats, and pieces of words repeated as a ping-pong delayed mantra.</div>
-      </template>
-      <template v-slot:samples>
-        <InfoBox title="Samples" icon="ph-music-notes-plus-fill ph-2x" :borderColor="getCurrentCategory.color.border">
-          <p class="text-lg pb-4 text-slate-500"><span class="text-slate-300 pr-2">—</span>Vocal sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://www.youtube.com/watch?v=bgodzGPAdQE">Friend or Foe</a> by t.A.T.u., originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://open.spotify.com/album/5OrPbTYn2h56ShSBTOp9WJ">Dangerous and Moving</a>, published by Universal Music © 2005.</p>
+    <main class="grow">
+
+      <AudioPlayer ref="audio" :release="getCurrentRelease" :category="getCurrentCategory" />
+
+      <ReleaseDescription>
+        Have you ever had the experience of losing reference points through blurred memories and the now undefined shape of what you used to know? A trancestep dubtempo filled with tremolo synths, numbed beats, and pieces of words repeated as a ping-pong delayed mantra.
+      </ReleaseDescription>
+
+      <InfoBox title="Samples" icon="ph-music-notes-plus-fill ph-2x" :borderColor="getCurrentCategory.color.border">
+          <ul class="text-lg">
+           <li>
+              <p class="text-lg pb-4 text-slate-500"><EmDashListStyle />Vocal sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://www.youtube.com/watch?v=bgodzGPAdQE">Friend or Foe</a> by t.A.T.u., originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://open.spotify.com/album/5OrPbTYn2h56ShSBTOp9WJ">Dangerous and Moving</a>, published by Universal Music © 2005.</p>
+            </li>
+          </ul>
         </InfoBox>
-      </template>
-    </TunePage>  
+
+      <Carousel class="my-12 md:my-20" :category="getCurrentCategory.slug" />
     
+    </main> 
+    
+    <!-- Site footer -->
     <Footer />    
 
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+import AudioPlayer from '../../partials/AudioPlayer.vue'
 import Header from '../../partials/layout/Header.vue'
-import TunePage from '../../partials/release/TunePage.vue'
+import ReleaseDescription from '../../components/ReleaseDescription.vue'
 import InfoBox from '../../components/InfoBox.vue'
+import EmDashListStyle from '../../components/EmDashListStyle.vue'
+import Carousel from '../../partials/Carousel.vue'
 import Footer from '../../partials/layout/Footer.vue'
 import releases from '../../data/releases.json'
 import categories from '../../data/categories.json'
@@ -35,8 +49,11 @@ export default {
   name: 'Podcast',
   components: {
     Header,
-    TunePage,
+    AudioPlayer,
+    ReleaseDescription,
     InfoBox,
+    EmDashListStyle,
+    Carousel,
     Footer,
   },
   computed: {
@@ -49,6 +66,18 @@ export default {
     },
     getCurrentCategory() {
       return this.matchCategory(categories, this.getCurrentRelease.category)
+    }
+  },
+  setup() {
+    const audio = ref(null)
+
+    const goToTime = (time) => {
+      audio.value.goToTime(time)
+    }
+
+    return {
+      audio,
+      goToTime,
     }
   },
   metaInfo() {

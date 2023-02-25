@@ -5,17 +5,108 @@
     <Header />
 
     <!-- Page content -->
-    <TunePage :release="getCurrentRelease"> 
-      <template v-slot:description>
-        <div class="text-xl">A hot cup full of dubstep, lust and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis on how shouldn't be so hard to have a nice day, and how actually is. Finally.</div>
-      </template>
-      <template v-slot:samples>
-        <InfoBox title="Samples" icon="ph-music-notes-plus-fill ph-2x" :borderColor="getCurrentCategory.color.border">
-          <p class="text-lg pb-4 text-slate-500"><span class="text-slate-300 pr-2">—</span>Drum sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://soundcloud.com/samuraimusicgroup/asc-glass-walls-out-of-sync">Glass Walls</a> by ASC, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://asc77.bandcamp.com/album/out-of-sync">Out of Sync</a>, published by Samurai Red Seal Records © 2012.</p>
-          <p class="text-lg pb-2 text-slate-500"><span class="text-slate-300 pr-2">—</span>Synth sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/track/nebelweg">Nebelweg</a> by Dive, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/album/no-soul-2">No Soul</a>, published by Waking Ghosts Records © 2012.</p>
+    <main class="grow">
+
+      <AudioPlayer ref="audio" :release="getCurrentRelease" :category="getCurrentCategory" />
+
+      <ReleaseDescription>
+        A hot cup full of dubstep, lust and uncontrolled electronics driven off road by kicking and overwhelming emotions. A digital, detailed analysis on how shouldn't be so hard to have a nice day, and how actually is. Finally.
+      </ReleaseDescription>
+
+      <InfoBox title="Samples" icon="ph-music-notes-plus-fill ph-2x" :borderColor="getCurrentCategory.color.border">
+          <ul class="text-lg">
+           <li>
+              <p class="text-lg pb-4 text-slate-500"><EmDashListStyle />Drum sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://soundcloud.com/samuraimusicgroup/asc-glass-walls-out-of-sync">Glass Walls</a> by ASC, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://asc77.bandcamp.com/album/out-of-sync">Out of Sync</a>, published by Samurai Red Seal Records © 2012.</p>
+            </li>
+            <li>
+              <p class="text-lg pb-2 text-slate-500"><EmDashListStyle />Synth sample from <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/track/nebelweg">Nebelweg</a> by Dive, originally appearing on the album <a class="text-slate-800 hover:underline" target="_blank" href="https://fabiantombers.bandcamp.com/album/no-soul-2">No Soul</a>, published by Waking Ghosts Records © 2012.</p>
+            </li>
+          </ul>
         </InfoBox>
-      </template>
-    </TunePage>  
+
+      <Carousel class="my-12 md:my-20" :category="getCurrentCategory.slug" />
+    
+    </main> 
+    
+    <!-- Site footer -->
+    <Footer />    
+
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue'
+import AudioPlayer from '../../partials/AudioPlayer.vue'
+import Header from '../../partials/layout/Header.vue'
+import ReleaseDescription from '../../components/ReleaseDescription.vue'
+import InfoBox from '../../components/InfoBox.vue'
+import EmDashListStyle from '../../components/EmDashListStyle.vue'
+import Carousel from '../../partials/Carousel.vue'
+import Footer from '../../partials/layout/Footer.vue'
+import releases from '../../data/releases.json'
+import categories from '../../data/categories.json'
+import matchItemBySlug from '../../libraries/mixins'
+import matchCategory from '../../libraries/mixins'
+
+export default {
+  name: 'Podcast',
+  components: {
+    Header,
+    AudioPlayer,
+    ReleaseDescription,
+    InfoBox,
+    EmDashListStyle,
+    Carousel,
+    Footer,
+  },
+  computed: {
+    getCurrentSlug() {
+      const slicedPath = this.$route.path.match(/[^\/]+/g)
+      return slicedPath[slicedPath.length - 1]
+    },
+    getCurrentRelease() {
+      return this.matchItemBySlug(releases, this.getCurrentSlug)
+    },
+    getCurrentCategory() {
+      return this.matchCategory(categories, this.getCurrentRelease.category)
+    }
+  },
+  setup() {
+    const audio = ref(null)
+
+    const goToTime = (time) => {
+      audio.value.goToTime(time)
+    }
+
+    return {
+      audio,
+      goToTime,
+    }
+  },
+  metaInfo() {
+    return {
+      title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
+      description: this.getCurrentRelease.seoDescription,
+      url: { tag: 'meta', content: `https://www.spinelesslaugh.com/${this.$route.path}` },
+      og: {
+        title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
+        description: this.getCurrentRelease.seoDescription,
+        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg'),
+        type: 'website',
+        url: `https://www.spinelesslaugh.com/${this.$route.path}`
+      },
+      twitter: {
+        title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
+        description: this.getCurrentRelease.seoDescription,
+        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg')
+      }
+    }
+  },
+  mixins: [ matchItemBySlug, matchCategory ]
+}
+</script>
+
+
     <!-- <main class="grow">
 
       <AudioPlayer ref="audio" /> -->
@@ -143,79 +234,3 @@
     <!-- </main> -->
     
     <!-- Site footer -->
-    <Footer />    
-
-  </div>
-</template>
-
-<script>
-// import { ref } from 'vue'
-import Header from '../../partials/layout/Header.vue'
-import TunePage from '../../partials/release/TunePage.vue'
-// import AudioPlayer from '../../partials/AudioPlayer.vue'
-// import Carousel from '../../partials/Carousel.vue'
-// import Cta from '../../partials/Cta.vue'
-import InfoBox from '../../components/InfoBox.vue'
-import Footer from '../../partials/layout/Footer.vue'
-import releases from '../../data/releases.json'
-import categories from '../../data/categories.json'
-import matchItemBySlug from '../../libraries/mixins'
-import matchCategory from '../../libraries/mixins'
-
-export default {
-  name: 'Podcast',
-  components: {
-    Header,
-    TunePage,
-    InfoBox,
-    // AudioPlayer,
-    // Carousel,
-    // Cta,
-    Footer,
-  },
-  computed: {
-    getCurrentSlug() {
-      const slicedPath = this.$route.path.match(/[^\/]+/g)
-      return slicedPath[slicedPath.length - 1]
-    },
-    getCurrentRelease() {
-      return this.matchItemBySlug(releases, this.getCurrentSlug)
-    },
-    getCurrentCategory() {
-      return this.matchCategory(categories, this.getCurrentRelease.category)
-    }
-  },
-  metaInfo() {
-    return {
-      title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
-      description: this.getCurrentRelease.seoDescription,
-      url: { tag: 'meta', content: `https://www.spinelesslaugh.com/${this.$route.path}` },
-      og: {
-        title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
-        description: this.getCurrentRelease.seoDescription,
-        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg'),
-        type: 'website',
-        url: `https://www.spinelesslaugh.com/${this.$route.path}`
-      },
-      twitter: {
-        title: `Spineless Laugh's Music | ${this.getCurrentRelease.title}`,
-        description: this.getCurrentRelease.seoDescription,
-        image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg')
-      }
-    }
-  },
-  mixins: [ matchItemBySlug, matchCategory ]
-  // setup() {
-  //   const audio = ref(null)
-
-  //   const goToTime = (time) => {
-  //     audio.value.goToTime(time)
-  //   }
-
-  //   return {
-  //     audio,
-  //     goToTime,
-  //   }
-  // }
-}
-</script>

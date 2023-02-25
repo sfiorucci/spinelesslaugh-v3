@@ -10,6 +10,20 @@
         <slot name="samples"></slot>
       </div>
 
+      <ul class="text-lg">
+            <li>
+              <button class="w-full text-left py-1.5 group" @click="goToTime('0:00')">
+                <span class="text-slate-300 font-medium pr-2">▶</span> <span class="text-slate-800 font-medium">0:00</span> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Shikomi: the music of a simple kimono.</span>
+              </button>
+              <button class="w-full text-left py-1.5 group" @click="goToTime('2:42')">
+                <span class="text-slate-300 font-medium pr-2">▶</span> <span class="text-slate-800 font-medium">2:42</span> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Minarai: the swish of and obi, filled of kanzashi chimes.</span>
+              </button>
+              <button class="w-full text-left py-1.5 group" @click="goToTime('3:55')">
+                <span class="text-slate-300 font-medium pr-2">▶</span> <span class="text-slate-800 font-medium">3:55</span> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Maiko: a fully-fledged womand of dance.</span>
+              </button>
+            </li>
+          </ul>
+
       <Carousel class="my-12 md:my-20" :category="getReleaseCategory.slug" />
 
     </main>

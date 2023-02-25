@@ -5,38 +5,53 @@
     <Header />
 
     <!-- Page content -->
-    <TunePage :release="getCurrentRelease"> 
-      <template v-slot:description>
-        <div class="text-xl">An electronic opera in three parts, aiming to track down the ancient algorithm of building beauty from scratch. First, casting the caterpillar, bringing life into a cocoon. Then, editing chrysalis and contemplating the J-formation process. Last, mixing the final butterfly and watch it fly, in chaotic, random motion.</div>
-      </template>
-      <template v-slot:samples>
-        <InfoBox title="Chapters" icon="ph-bookmarks-simple-fill ph-2x" :borderColor="getCurrentCategory.color.border">
+    <main class="grow">
+
+      <AudioPlayer ref="audio" :release="getCurrentRelease" :category="getCurrentCategory" />
+
+      <ReleaseDescription>
+        An electronic opera in three parts, aiming to track down the ancient algorithm of building beauty from scratch. First, casting the caterpillar, bringing life into a cocoon. Then, editing chrysalis and contemplating the J-formation process. Last, mixing the final butterfly and watch it fly, in chaotic, random motion.
+      </ReleaseDescription>
+
+      <InfoBox title="Chapters" icon="ph-bookmarks-simple-fill ph-2x" :borderColor="getCurrentCategory.color.border">
           <ul class="text-lg">
             <li>
               <button class="w-full text-left py-1.5 group" @click="goToTime('0:00')">
-                <span class="text-slate-300 font-medium pr-2">▶</span> <span class="text-slate-800 font-medium">0:00</span> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Casting caterpillar.</span>
+                <PlayListStyle /><TimeCode time="0:00" /> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Casting caterpillar.</span>
               </button>
+            </li>
+            <li>
               <button class="w-full text-left py-1.5 group" @click="goToTime('2:44')">
-                <span class="text-slate-300 font-medium pr-2">▶</span> <span class="text-slate-800 font-medium">2:44</span> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Editing chrysalis: the J-formation.</span>
+                <PlayListStyle /><TimeCode time="2:44" /> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Editing chrysalis: the J-formation.</span>
               </button>
+            </li>
+            <li>
               <button class="w-full text-left py-1.5 group" @click="goToTime('9:00')">
-                <span class="text-slate-300 font-medium pr-2">▶</span> <span class="text-slate-800 font-medium">9:00</span> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Mixing butterfly in motion.</span>
+                <PlayListStyle /><TimeCode time="9:00" /> <span class="text-slate-500 group-hover:text-slate-800 transition duration-150 ease-in-out">— Mixing butterfly in motion.</span>
               </button>
             </li>
           </ul>
         </InfoBox>
-      </template>
-    </TunePage>  
+
+      <Carousel class="my-12 md:my-20" :category="getCurrentCategory.slug" />
     
+    </main> 
+    
+    <!-- Site footer -->
     <Footer />    
 
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+import AudioPlayer from '../../partials/AudioPlayer.vue'
 import Header from '../../partials/layout/Header.vue'
-import TunePage from '../../partials/release/TunePage.vue'
+import ReleaseDescription from '../../components/ReleaseDescription.vue'
 import InfoBox from '../../components/InfoBox.vue'
+import PlayListStyle from '../../components/PlayListStyle.vue'
+import TimeCode from '../../components/TimeCode.vue'
+import Carousel from '../../partials/Carousel.vue'
 import Footer from '../../partials/layout/Footer.vue'
 import releases from '../../data/releases.json'
 import categories from '../../data/categories.json'
@@ -47,8 +62,12 @@ export default {
   name: 'Podcast',
   components: {
     Header,
-    TunePage,
+    AudioPlayer,
+    ReleaseDescription,
     InfoBox,
+    PlayListStyle,
+    TimeCode,
+    Carousel,
     Footer,
   },
   computed: {
@@ -61,6 +80,18 @@ export default {
     },
     getCurrentCategory() {
       return this.matchCategory(categories, this.getCurrentRelease.category)
+    }
+  },
+  setup() {
+    const audio = ref(null)
+
+    const goToTime = (time) => {
+      audio.value.goToTime(time)
+    }
+
+    return {
+      audio,
+      goToTime,
     }
   },
   metaInfo() {
