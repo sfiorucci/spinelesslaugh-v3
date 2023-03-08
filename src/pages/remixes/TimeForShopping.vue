@@ -82,18 +82,18 @@ export default {
   },
   metaInfo() {
     return {
-      title: `Spineless Laugh's ${this.getCurrentCategory.name} | ${this.getCurrentRelease.title}`,
+      title: `Spineless Laugh's ${this.getCurrentCategory.name} | ${this.getCurrentRelease.fullTitle}`,
       description: this.getCurrentRelease.seoDescription,
       url: { tag: 'meta', content: `https://www.spinelesslaugh.com/${this.$route.path}` },
       og: {
-        title: `Spineless Laugh's ${this.getCurrentCategory.name} | ${this.getCurrentRelease.title}`,
+        title: `Spineless Laugh's ${this.getCurrentCategory.name} | ${this.getCurrentRelease.fullTitle}`,
         description: this.getCurrentRelease.seoDescription,
         image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg'),
         type: 'website',
         url: `https://www.spinelesslaugh.com/${this.$route.path}`
       },
       twitter: {
-        title: `Spineless Laugh's ${this.getCurrentCategory.name} | ${this.getCurrentRelease.title}`,
+        title: `Spineless Laugh's ${this.getCurrentCategory.name} | ${this.getCurrentRelease.fullTitle}`,
         description: this.getCurrentRelease.seoDescription,
         image: this.buildImagePath(this.getCurrentCategory.imagePath, 'cover', this.getCurrentSlug, 'jpg')
       }

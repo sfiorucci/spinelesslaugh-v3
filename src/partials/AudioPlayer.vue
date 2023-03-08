@@ -16,6 +16,7 @@
               <div class="max-w-3xl w-full">
                 <!-- Copy -->
                 <h1 class="h2 font-hkgrotesk text-slate-100 mb-4">{{ release.title }}</h1>
+                <h2 v-if="release.hasSubtitle" class="text-2xl font-hkgrotesk font-medium text-slate-100 opacity-90 uppercase tracking-wider mb-4">{{ release.subtitle }}</h2>
                 <div class="font-hkgrotesk text-white font-medium opacity-80 mb-8"><router-link class="hover:underline" :to="`/${category.slug}`">{{ release.category }}</router-link> · {{ formatDate(release.date) }}</div>
 
                 <!-- Player -->
